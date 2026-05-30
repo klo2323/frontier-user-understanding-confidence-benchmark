@@ -124,6 +124,15 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.33,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_to_moderate."
       }
     },
     {
@@ -188,6 +197,15 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.33,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_to_moderate."
       }
     },
     {
@@ -252,6 +270,15 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.33,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_to_moderate."
       }
     },
     {
@@ -316,6 +343,15 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.33,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_to_moderate."
       }
     }
   ],

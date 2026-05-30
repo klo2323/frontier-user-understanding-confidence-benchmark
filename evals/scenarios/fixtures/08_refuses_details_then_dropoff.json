@@ -14,7 +14,7 @@
     "dropoff_after_turn": "t4",
     "dropoff_interpretation": "unknown_possible_mistrust_or_low_bandwidth",
     "target_user_turns": "2_then_dropoff",
-    "notes": "Dropoff is metadata only; current scorer should not treat absence as evidence."
+    "notes": "Dropoff risk is estimated per user turn. Observed dropoff remains outcome metadata for later calibration."
   },
   "turns": [
     {

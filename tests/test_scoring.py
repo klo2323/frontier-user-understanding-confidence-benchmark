@@ -164,6 +164,27 @@ class ScoringEngineTests(unittest.TestCase):
         )
         self.assertIn("tailored_support_decision", final_trace)
 
+    def test_dropoff_risk_is_scored_per_user_turn(self) -> None:
+        fixture_path = Path(
+            "evals/scenarios/fixtures/08_refuses_details_then_dropoff.json"
+        )
+        request = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        result = score_conversation(request)
+        trace = result["confidence_trace"]
+
+        self.assertTrue(all("dropoff_risk" in item for item in trace))
+        self.assertGreaterEqual(trace[-1]["dropoff_risk"]["rate"], 0.7)
+        self.assertEqual(trace[-1]["dropoff_risk"]["level"], "high")
+        self.assertIn(
+            "explicit_withholding_or_exit_language",
+            trace[-1]["dropoff_risk"]["drivers"],
+        )
+        self.assertEqual(
+            result["hidden_state"]["metadata_inferences"]["dropoff"]["session_outcome"],
+            "user_dropoff",
+        )
+
     def test_strict_root_validation_rejects_extra_keys(self) -> None:
         request = {
             "conversation_id": "bad-001",

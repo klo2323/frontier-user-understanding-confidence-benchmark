@@ -10,6 +10,10 @@ The central question is not whether the system can identify who the user “real
 
 > What can the model responsibly infer about this user from the current interaction alone, and how confident should it be at each turn?
 
+## Research Value Statement
+
+This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how confidence changes across hidden user-state dimensions turn by turn.
+
 ## Research Frame
 
 This is a social cognition evaluation for AI systems.

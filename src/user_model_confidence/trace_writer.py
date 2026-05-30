@@ -105,6 +105,17 @@ def render_trace_item(trace_item: dict[str, Any]) -> list[str]:
             )
 
     lines.append("")
+    dropoff_risk = trace_item.get("dropoff_risk") or {}
+    if dropoff_risk:
+        lines.append("#### Dropoff Risk")
+        lines.append("")
+        lines.append(f"- Rate: `{dropoff_risk.get('rate')}`")
+        lines.append(f"- Level: `{dropoff_risk.get('level')}`")
+        drivers = dropoff_risk.get("drivers") or []
+        lines.append(f"- Drivers: `{', '.join(drivers) if drivers else 'none'}`")
+        lines.append(f"- Rationale: {dropoff_risk.get('rationale')}")
+        lines.append("")
+
     decision = trace_item.get("tailored_support_decision") or {}
     if decision:
         lines.append("#### Tailored Support Decision")

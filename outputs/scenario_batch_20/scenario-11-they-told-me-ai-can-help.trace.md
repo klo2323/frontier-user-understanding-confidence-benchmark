@@ -37,6 +37,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `ai_literacy_level` `positive` weight `3.0` from `inferred_literacy_signal` value `low` (active).
 - `risk_adversarial_intent` `positive` weight `0.5` from `inferred_risk_signal` value `low` (active).
 
+#### Dropoff Risk
+
+- Rate: `0.4`
+- Level: `medium`
+- Drivers: `scenario_prior_high_dropoff_risk, low`
+- Rationale: Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low.
+
 #### Tailored Support Decision
 
 - Level: `low`
@@ -71,6 +78,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `user_goal` `positive` weight `3.0` from `inferred_goal` value `improve_message_tone` (active).
 - `trust_posture` `positive` weight `0.5` from `inferred_trust_signal` value `open_or_task_focused` (active).
 - `risk_adversarial_intent` `positive` weight `0.5` from `inferred_risk_signal` value `low` (active).
+
+#### Dropoff Risk
+
+- Rate: `0.56`
+- Level: `medium`
+- Drivers: `scenario_prior_high_dropoff_risk, low_goal_clarity, low`
+- Rationale: Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low.
 
 #### Tailored Support Decision
 
@@ -108,6 +122,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `ai_literacy_level` `positive` weight `3.0` from `inferred_literacy_signal` value `low` (active).
 - `risk_adversarial_intent` `positive` weight `0.5` from `inferred_risk_signal` value `low` (active).
 
+#### Dropoff Risk
+
+- Rate: `0.56`
+- Level: `medium`
+- Drivers: `scenario_prior_high_dropoff_risk, low_goal_clarity, low`
+- Rationale: Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low.
+
 #### Tailored Support Decision
 
 - Level: `low`
@@ -141,6 +162,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `trust_posture` `positive` weight `3.0` from `inferred_trust_signal` value `cautiously_engaging` (active).
 - `ai_literacy_level` `positive` weight `3.0` from `inferred_literacy_signal` value `low` (active).
 - `risk_adversarial_intent` `positive` weight `0.5` from `inferred_risk_signal` value `low` (active).
+
+#### Dropoff Risk
+
+- Rate: `0.56`
+- Level: `medium`
+- Drivers: `scenario_prior_high_dropoff_risk, low_goal_clarity, low`
+- Rationale: Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low.
 
 #### Tailored Support Decision
 

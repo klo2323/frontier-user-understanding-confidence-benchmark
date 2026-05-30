@@ -109,6 +109,19 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.85,
+        "level": "high",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive",
+          "low_to_moderate",
+          "privacy_probe_not_clearly_malicious",
+          "system_boundary_or_safety_concern"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive, low_to_moderate, privacy_probe_not_clearly_malicious, system_boundary_or_safety_concern."
       }
     },
     {
@@ -219,6 +232,19 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.85,
+        "level": "high",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive",
+          "low_to_moderate_systems_literacy",
+          "privacy_probe_not_clearly_malicious",
+          "system_boundary_or_safety_concern"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive, low_to_moderate_systems_literacy, privacy_probe_not_clearly_malicious, system_boundary_or_safety_concern."
       }
     },
     {
@@ -329,6 +355,19 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.85,
+        "level": "high",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive",
+          "low_to_moderate_systems_literacy",
+          "privacy_probe_not_clearly_malicious",
+          "system_boundary_or_safety_concern"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive, low_to_moderate_systems_literacy, privacy_probe_not_clearly_malicious, system_boundary_or_safety_concern."
       }
     },
     {
@@ -439,6 +478,17 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.61,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "privacy_sensitive",
+          "low_to_moderate_systems_literacy",
+          "sensitive_but_not_adversarial"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, privacy_sensitive, low_to_moderate_systems_literacy, sensitive_but_not_adversarial."
       }
     },
     {
@@ -564,6 +614,17 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.57,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate_systems_literacy",
+          "sensitive_but_not_adversarial"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, low_to_moderate_systems_literacy, sensitive_but_not_adversarial."
       }
     },
     {
@@ -628,6 +689,17 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.57,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate_systems_literacy",
+          "sensitive_but_not_adversarial"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, low_to_moderate_systems_literacy, sensitive_but_not_adversarial."
       }
     }
   ],

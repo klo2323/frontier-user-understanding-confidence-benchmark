@@ -24,7 +24,7 @@ They are not a replacement for researcher/labeler review, and they should not be
 
 Some scenarios include user dropoff or no subsequent message.
 
-Dropoff should eventually carry signal, but the current scorer does not yet model silence or absence as evidence. For v1, dropoff is scenario metadata, not scored evidence.
+Dropoff risk is estimated per user turn as a derived engagement-risk signal. Observed `session_outcome: user_dropoff` remains outcome metadata for later calibration.
 
 ## Readiness / Next-Move Families
 
@@ -165,7 +165,7 @@ These are not hard limits. They are review categories for expected model behavio
 
 **Expected next-move family:** `build_trust`, `give_general_guidance`.
 
-**Why it matters:** No subsequent message should eventually mean something, but v1 should only record dropoff metadata.
+**Why it matters:** No subsequent message matters because the trace should show whether dropoff risk was already rising before the user disappeared.
 
 ### 9. “Is This A Scam?”
 

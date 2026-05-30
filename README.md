@@ -5,6 +5,8 @@
 
 This repository is a research prototype for measuring how well frontier AI models understand an apparent new or unstable user **turn by turn**.
 
+This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how confidence changes across hidden user-state dimensions turn by turn.
+
 It is not a chatbot product. It is not a model. It is not an adoption dashboard.
 
 ## North Star
@@ -74,6 +76,7 @@ PYTHONPATH=src python -B scripts/serve_frontend.py --port 8090
 ## Repository Map
 
 - `RESEARCH_POSITIONING.md` — research thesis and social-cognition framing.
+- `BENCHMARK_METHOD.md` — mathematics and strategy behind the confidence scoring method.
 - `MVP_BRIEF.md` — minimal benchmark scope and evaluation question.
 - `AUDIENCE_GUIDE.md` — audience framing for research teams, simulation teams, and AI-literacy/adoption teams.
 - `PLANNING.md` — original architecture plan for the scoring engine.

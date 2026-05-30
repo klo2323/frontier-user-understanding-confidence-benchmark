@@ -94,6 +94,17 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.74,
+        "level": "high",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "guarded_high_mistrust",
+          "system_boundary_or_safety_concern"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, guarded_high_mistrust, system_boundary_or_safety_concern."
       }
     },
     {
@@ -158,6 +169,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.66,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "guarded_high_mistrust"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, guarded_high_mistrust."
       }
     },
     {
@@ -222,6 +243,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.66,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "guarded_high_mistrust"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, guarded_high_mistrust."
       }
     }
   ],

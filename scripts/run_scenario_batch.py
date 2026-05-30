@@ -44,6 +44,7 @@ def main() -> int:
         labels = request.get("ground_truth_labels", {})
         inferred = final.get("inferred_values", {})
         decision = final.get("tailored_support_decision", {})
+        dropoff_risk = final.get("dropoff_risk", {})
         row = {
             "fixture": fixture_path.name,
             "conversation_id": request["conversation_id"],
@@ -54,6 +55,8 @@ def main() -> int:
             "tailored_support_level": decision.get("tailored_support_level"),
             "recommended_next_move": decision.get("recommended_next_move"),
             "overreach_risk": decision.get("overreach_risk"),
+            "dropoff_risk_rate": dropoff_risk.get("rate"),
+            "dropoff_risk_level": dropoff_risk.get("level"),
         }
         mismatch_count = 0
         for dimension in DIMENSIONS:
@@ -106,18 +109,21 @@ def render_report(rows: list[dict[str, object]], output_dir: Path, csv_path: Pat
     total = len(rows)
     avg_mismatch = sum(int(row["dimension_mismatch_count"]) for row in rows) / total
     avg_overreach = sum(float(row["overreach_risk"] or 0) for row in rows) / total
+    avg_dropoff = sum(float(row["dropoff_risk_rate"] or 0) for row in rows) / total
     lines.append(f"- Scenarios run: `{total}`")
     lines.append(f"- Average dimension mismatch count: `{avg_mismatch:.2f}` of 4")
     lines.append(f"- Average overreach risk: `{avg_overreach:.2f}`")
+    lines.append(f"- Average final dropoff risk rate: `{avg_dropoff:.2f}`")
     lines.append("")
     lines.append("## Scenario Table")
     lines.append("")
-    lines.append("| Fixture | Turns | Mismatches | Support Level | Next Move | Overreach |")
-    lines.append("|---|---:|---:|---|---|---:|")
+    lines.append("| Fixture | Turns | Mismatches | Support Level | Next Move | Overreach | Dropoff Risk |")
+    lines.append("|---|---:|---:|---|---|---:|---:|")
     for row in rows:
         lines.append(
             f"| `{row['fixture']}` | {row['user_turns']} | {row['dimension_mismatch_count']} | "
-            f"`{row['tailored_support_level']}` | `{row['recommended_next_move']}` | {row['overreach_risk']} |"
+            f"`{row['tailored_support_level']}` | `{row['recommended_next_move']}` | "
+            f"{row['overreach_risk']} | {row['dropoff_risk_rate']} |"
         )
     lines.append("")
     lines.append("## Highest Mismatch Cases")
@@ -128,6 +134,7 @@ def render_report(rows: list[dict[str, object]], output_dir: Path, csv_path: Pat
         lines.append(f"- Mismatches: `{row['dimension_mismatch_count']}` of 4")
         lines.append(f"- Final next move: `{row['recommended_next_move']}`")
         lines.append(f"- Overreach risk: `{row['overreach_risk']}`")
+        lines.append(f"- Final dropoff risk: `{row['dropoff_risk_rate']}` (`{row['dropoff_risk_level']}`)")
         for dimension in DIMENSIONS:
             lines.append(
                 f"- `{dimension}`: expected `{row[f'expected_{dimension}']}`, "

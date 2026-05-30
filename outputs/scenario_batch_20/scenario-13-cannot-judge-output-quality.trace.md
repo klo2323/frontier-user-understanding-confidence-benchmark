@@ -34,6 +34,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 
 - No scored evidence was applied on this turn.
 
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
+
 #### Tailored Support Decision
 
 - Level: `none`
@@ -65,6 +72,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 #### Evidence Applied
 
 - No scored evidence was applied on this turn.
+
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
 
 #### Tailored Support Decision
 
@@ -98,6 +112,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 
 - No scored evidence was applied on this turn.
 
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
+
 #### Tailored Support Decision
 
 - Level: `none`
@@ -129,6 +150,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 #### Evidence Applied
 
 - No scored evidence was applied on this turn.
+
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
 
 #### Tailored Support Decision
 

@@ -2,13 +2,19 @@
 
 **Author / Project Owner:** Kelsey Ontko
 
-This guide frames the same project for three generic audiences without naming specific companies.
+This guide frames the same project for generic research audiences without naming specific organizations.
 
 ## Shared Thesis
 
 > Given the conversation so far, what does the model infer about the user, how confident is it, and is that confidence justified at this turn?
 
 The scorer measures model confidence in user understanding, not user worthiness, user identity, or final task success.
+
+## Immediate Audience Lens
+
+- **Frontier-model human-understanding research teams:** care because the benchmark frames human understanding as an AGI-relevant social-cognition capability: dynamic user modeling under uncertainty, calibrated confidence, belief revision, and culturally brittle evaluation.
+- **Simulation and synthetic-user evaluation teams:** care because the benchmark can test whether simulated or synthetic users encode unrealistic assumptions about real human behavior, especially in high-entropy contexts where users are indirect, mistrustful, low-literacy, privacy-sensitive, or likely to disappear.
+
 
 ## 1. Experience / Simulation-First AI Labs
 

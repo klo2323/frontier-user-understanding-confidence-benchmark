@@ -94,6 +94,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.59,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive."
       }
     },
     {
@@ -158,6 +168,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.59,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive."
       }
     },
     {
@@ -222,6 +242,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.59,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive."
       }
     },
     {
@@ -286,6 +316,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.59,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "privacy_sensitive"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, privacy_sensitive."
       }
     }
   ],

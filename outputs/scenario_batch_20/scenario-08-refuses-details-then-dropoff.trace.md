@@ -31,6 +31,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `trust_posture` `positive` weight `3.0` from `inferred_trust_signal` value `guarded_high_mistrust` (active).
 - `risk_adversarial_intent` `positive` weight `0.5` from `inferred_risk_signal` value `low` (active).
 
+#### Dropoff Risk
+
+- Rate: `0.71`
+- Level: `high`
+- Drivers: `low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language`
+- Rationale: Dropoff risk is high because the trace contains: low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language.
+
 #### Tailored Support Decision
 
 - Level: `low`
@@ -62,6 +69,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 #### Evidence Applied
 
 - No scored evidence was applied on this turn.
+
+#### Dropoff Risk
+
+- Rate: `0.71`
+- Level: `high`
+- Drivers: `low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language`
+- Rationale: Dropoff risk is high because the trace contains: low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language.
 
 #### Tailored Support Decision
 

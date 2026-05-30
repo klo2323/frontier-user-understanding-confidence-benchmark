@@ -69,6 +69,7 @@ def score_conversation(
             config=config,
         )
         tailored_support_decision = compute_tailored_support_decision(state)
+        dropoff_risk = compute_dropoff_risk(request, turn, state)
 
         confidence_trace.append(
             {
@@ -95,10 +96,13 @@ def score_conversation(
                 "contradictions": len(state.contradiction_events),
                 "overall_confidence": round(overall_confidence, 6),
                 "tailored_support_decision": tailored_support_decision,
+                "dropoff_risk": dropoff_risk,
             }
         )
 
         history.append(turn)
+
+    record_observed_dropoff(request, state)
 
     return {
         "conversation_id": request["conversation_id"],
@@ -363,3 +367,97 @@ def calibration_notes(
 
 def round_distribution(distribution: dict[str, float]) -> dict[str, float]:
     return {key: round(value, 6) for key, value in distribution.items()}
+
+
+def compute_dropoff_risk(
+    request: dict[str, Any],
+    turn: dict[str, Any],
+    state: ConversationState,
+) -> dict[str, Any]:
+    metadata = request.get("conversation_metadata") or {}
+    rate = 0.15
+    drivers: list[str] = []
+
+    scenario_prior = metadata.get("dropoff_risk")
+    if scenario_prior == "high":
+        rate += 0.15
+        drivers.append("scenario_prior_high_dropoff_risk")
+    elif scenario_prior == "medium":
+        rate += 0.08
+        drivers.append("scenario_prior_medium_dropoff_risk")
+
+    goal = state.beliefs["user_goal"]
+    trust = state.beliefs["trust_posture"]
+    literacy = state.beliefs["ai_literacy_level"]
+    risk = state.beliefs["risk_adversarial_intent"]
+
+    if not goal.value or goal.confidence < 0.65:
+        rate += 0.16
+        drivers.append("low_goal_clarity")
+
+    if trust.value in {"guarded_high_mistrust", "privacy_sensitive", "uncertain_disoriented"}:
+        rate += 0.20
+        drivers.append(trust.value)
+
+    if literacy.value in {"low", "low_to_moderate", "low_to_moderate_systems_literacy"}:
+        rate += 0.10
+        drivers.append(literacy.value)
+
+    if risk.value in {"privacy_probe_not_clearly_malicious", "sensitive_but_not_adversarial"}:
+        rate += 0.08
+        drivers.append(risk.value)
+    elif risk.value == "testing_system_or_adversarial":
+        rate += 0.16
+        drivers.append(risk.value)
+
+    lowered = turn["text"].lower()
+    if contains_any(lowered, ("not putting", "not saying", "maybe no", "don't want", "dont want")):
+        rate += 0.20
+        drivers.append("explicit_withholding_or_exit_language")
+
+    if contains_any(lowered, ("scam", "safe", "vpn", "where i am", "knew too much")):
+        rate += 0.08
+        drivers.append("system_boundary_or_safety_concern")
+
+    rate = min(max(rate, 0.0), 0.95)
+    if rate >= 0.70:
+        level = "high"
+    elif rate >= 0.40:
+        level = "medium"
+    else:
+        level = "low"
+
+    return {
+        "rate": round(rate, 6),
+        "level": level,
+        "drivers": drivers,
+        "rationale": dropoff_rationale(level, drivers),
+    }
+
+
+def dropoff_rationale(level: str, drivers: list[str]) -> str:
+    if not drivers:
+        return "No strong dropoff risk drivers are visible yet."
+    return (
+        f"Dropoff risk is {level} because the trace contains: "
+        + ", ".join(drivers)
+        + "."
+    )
+
+
+def record_observed_dropoff(request: dict[str, Any], state: ConversationState) -> None:
+    metadata = request.get("conversation_metadata") or {}
+    if metadata.get("session_outcome") != "user_dropoff":
+        return
+
+    state.metadata_inferences["dropoff"] = {
+        "observed": True,
+        "session_outcome": "user_dropoff",
+        "dropoff_after_turn": metadata.get("dropoff_after_turn"),
+        "dropoff_interpretation": metadata.get("dropoff_interpretation"),
+        "scoring_policy": "observed_outcome_for_calibration_not_user_turn_evidence",
+    }
+
+
+def contains_any(text: str, needles: tuple[str, ...]) -> bool:
+    return any(needle in text for needle in needles)

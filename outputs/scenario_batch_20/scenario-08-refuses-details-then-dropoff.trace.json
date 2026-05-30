@@ -94,6 +94,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.71,
+        "level": "high",
+        "drivers": [
+          "low_goal_clarity",
+          "guarded_high_mistrust",
+          "explicit_withholding_or_exit_language"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language."
       }
     },
     {
@@ -158,6 +168,16 @@
         "recommended_next_move": "build_trust_or_explain_system_limits",
         "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
         "overreach_risk": 0.65
+      },
+      "dropoff_risk": {
+        "rate": 0.71,
+        "level": "high",
+        "drivers": [
+          "low_goal_clarity",
+          "guarded_high_mistrust",
+          "explicit_withholding_or_exit_language"
+        ],
+        "rationale": "Dropoff risk is high because the trace contains: low_goal_clarity, guarded_high_mistrust, explicit_withholding_or_exit_language."
       }
     }
   ],
@@ -257,7 +277,15 @@
         "surprise": 2.493205
       }
     ],
-    "metadata_inferences": {}
+    "metadata_inferences": {
+      "dropoff": {
+        "observed": true,
+        "session_outcome": "user_dropoff",
+        "dropoff_after_turn": "t4",
+        "dropoff_interpretation": "unknown_possible_mistrust_or_low_bandwidth",
+        "scoring_policy": "observed_outcome_for_calibration_not_user_turn_evidence"
+      }
+    }
   },
   "calibration_notes": [
     {

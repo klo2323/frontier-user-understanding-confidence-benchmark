@@ -94,6 +94,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.49,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "low"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, low."
       }
     },
     {
@@ -158,6 +168,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.49,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "low"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, low."
       }
     },
     {
@@ -253,6 +273,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.49,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity",
+          "low"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity, low."
       }
     }
   ],

@@ -109,6 +109,14 @@
         "recommended_next_move": "give_tailored_guidance",
         "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
         "overreach_risk": 0.25
+      },
+      "dropoff_risk": {
+        "rate": 0.23,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk."
       }
     },
     {
@@ -173,6 +181,14 @@
         "recommended_next_move": "give_tailored_guidance",
         "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
         "overreach_risk": 0.25
+      },
+      "dropoff_risk": {
+        "rate": 0.23,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk."
       }
     },
     {
@@ -237,6 +253,14 @@
         "recommended_next_move": "give_tailored_guidance",
         "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
         "overreach_risk": 0.25
+      },
+      "dropoff_risk": {
+        "rate": 0.23,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk."
       }
     },
     {
@@ -301,6 +325,14 @@
         "recommended_next_move": "give_tailored_guidance",
         "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
         "overreach_risk": 0.25
+      },
+      "dropoff_risk": {
+        "rate": 0.23,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk."
       }
     }
   ],

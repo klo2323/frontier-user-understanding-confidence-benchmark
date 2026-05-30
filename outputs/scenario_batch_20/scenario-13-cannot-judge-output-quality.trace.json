@@ -63,6 +63,15 @@
         "recommended_next_move": "ask_goal_or_context",
         "rationale": "The user's goal is not clear enough for tailored support.",
         "overreach_risk": 0.75
+      },
+      "dropoff_risk": {
+        "rate": 0.39,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity."
       }
     },
     {
@@ -127,6 +136,15 @@
         "recommended_next_move": "ask_goal_or_context",
         "rationale": "The user's goal is not clear enough for tailored support.",
         "overreach_risk": 0.75
+      },
+      "dropoff_risk": {
+        "rate": 0.39,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity."
       }
     },
     {
@@ -191,6 +209,15 @@
         "recommended_next_move": "ask_goal_or_context",
         "rationale": "The user's goal is not clear enough for tailored support.",
         "overreach_risk": 0.75
+      },
+      "dropoff_risk": {
+        "rate": 0.39,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity."
       }
     },
     {
@@ -255,6 +282,15 @@
         "recommended_next_move": "ask_goal_or_context",
         "rationale": "The user's goal is not clear enough for tailored support.",
         "overreach_risk": 0.75
+      },
+      "dropoff_risk": {
+        "rate": 0.39,
+        "level": "low",
+        "drivers": [
+          "scenario_prior_medium_dropoff_risk",
+          "low_goal_clarity"
+        ],
+        "rationale": "Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity."
       }
     }
   ],

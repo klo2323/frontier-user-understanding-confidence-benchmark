@@ -94,6 +94,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.56,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate_systems_literacy"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low_to_moderate_systems_literacy."
       }
     },
     {
@@ -158,6 +168,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.56,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate_systems_literacy"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low_to_moderate_systems_literacy."
       }
     },
     {
@@ -253,6 +273,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.56,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low_to_moderate."
       }
     },
     {
@@ -317,6 +347,16 @@
         "recommended_next_move": "explain_ai_use",
         "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
         "overreach_risk": 0.55
+      },
+      "dropoff_risk": {
+        "rate": 0.56,
+        "level": "medium",
+        "drivers": [
+          "scenario_prior_high_dropoff_risk",
+          "low_goal_clarity",
+          "low_to_moderate"
+        ],
+        "rationale": "Dropoff risk is medium because the trace contains: scenario_prior_high_dropoff_risk, low_goal_clarity, low_to_moderate."
       }
     }
   ],

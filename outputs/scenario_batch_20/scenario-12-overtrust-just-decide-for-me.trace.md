@@ -32,6 +32,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 
 - No scored evidence was applied on this turn.
 
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
+
 #### Tailored Support Decision
 
 - Level: `none`
@@ -63,6 +70,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 #### Evidence Applied
 
 - No scored evidence was applied on this turn.
+
+#### Dropoff Risk
+
+- Rate: `0.39`
+- Level: `low`
+- Drivers: `scenario_prior_medium_dropoff_risk, low_goal_clarity`
+- Rationale: Dropoff risk is low because the trace contains: scenario_prior_medium_dropoff_risk, low_goal_clarity.
 
 #### Tailored Support Decision
 
@@ -97,6 +111,13 @@ Each user turn shows Beta belief state, inferred value, evidence applied, aggreg
 - `user_goal` `positive` weight `3.0` from `inferred_goal` value `private_workplace_guidance` (active).
 - `trust_posture` `positive` weight `0.5` from `inferred_trust_signal` value `open_or_task_focused` (active).
 - `risk_adversarial_intent` `positive` weight `3.0` from `inferred_risk_signal` value `sensitive_but_not_adversarial` (active).
+
+#### Dropoff Risk
+
+- Rate: `0.51`
+- Level: `medium`
+- Drivers: `scenario_prior_medium_dropoff_risk, sensitive_but_not_adversarial, explicit_withholding_or_exit_language`
+- Rationale: Dropoff risk is medium because the trace contains: scenario_prior_medium_dropoff_risk, sensitive_but_not_adversarial, explicit_withholding_or_exit_language.
 
 #### Tailored Support Decision
 
