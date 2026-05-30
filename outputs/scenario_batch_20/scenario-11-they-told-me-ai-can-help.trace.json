@@ -1,0 +1,892 @@
+{
+  "conversation_id": "scenario-11-they-told-me-ai-can-help",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "they told me AI can help but I don't know what to ask. can you just do it?",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "learn_how_ai_can_help",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "learn_how_ai_can_help",
+          "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_trust_signal",
+          "value": "open_or_task_focused",
+          "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "learn_how_ai_can_help",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.69282,
+      "surprise": 1.714798,
+      "average_surprise": 1.714798,
+      "contradictions": 0,
+      "overall_confidence": 0.464873,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "improve_message_tone",
+          "alpha": 4.0,
+          "beta": 4.0,
+          "confidence": 0.5,
+          "variance": 0.027778
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.666667,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.027778,
+        "trust_posture": 0.055556,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0005",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "user_goal",
+          "direction": "negative",
+          "weight": 3.0,
+          "source": "contradiction_retraction",
+          "value": "improve_message_tone",
+          "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": "Retracted ev_0001 with value learn_how_ai_can_help."
+        },
+        {
+          "evidence_id": "ev_0006",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "improve_message_tone",
+          "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0007",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_trust_signal",
+          "value": "open_or_task_focused",
+          "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0008",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "improve_message_tone",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.634254,
+      "surprise": 1.107829,
+      "average_surprise": 1.411313,
+      "contradictions": 1,
+      "overall_confidence": 0.405094,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 7.0,
+          "confidence": 0.363636,
+          "variance": 0.019284
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 2.5,
+          "beta": 1.0,
+          "confidence": 0.714286,
+          "variance": 0.045351
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.5,
+          "beta": 1.0,
+          "confidence": 0.714286,
+          "variance": 0.045351
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.363636,
+        "trust_posture": 0.714286,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.714286
+      },
+      "attribute_variances": {
+        "user_goal": 0.019284,
+        "trust_posture": 0.045351,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.045351
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0009",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "user_goal",
+          "direction": "negative",
+          "weight": 3.0,
+          "source": "contradiction_retraction",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": "Retracted ev_0006 with value improve_message_tone."
+        },
+        {
+          "evidence_id": "ev_0010",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0011",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_trust_signal",
+          "value": "open_or_task_focused",
+          "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0012",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0013",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.607488,
+      "surprise": 1.60107,
+      "average_surprise": 1.474566,
+      "contradictions": 2,
+      "overall_confidence": 0.303581,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "ok but don't make it too fancy. I need to understand it too.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 7.0,
+          "confidence": 0.363636,
+          "variance": 0.019284
+        },
+        "trust_posture": {
+          "value": "cautiously_engaging",
+          "alpha": 5.5,
+          "beta": 1.0,
+          "confidence": 0.846154,
+          "variance": 0.017357
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 10.0,
+          "beta": 1.0,
+          "confidence": 0.909091,
+          "variance": 0.006887
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 3.0,
+          "beta": 1.0,
+          "confidence": 0.75,
+          "variance": 0.0375
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.363636,
+        "trust_posture": 0.846154,
+        "ai_literacy_level": 0.909091,
+        "risk_adversarial_intent": 0.75
+      },
+      "attribute_variances": {
+        "user_goal": 0.019284,
+        "trust_posture": 0.017357,
+        "ai_literacy_level": 0.006887,
+        "risk_adversarial_intent": 0.0375
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0014",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "cautiously_engaging",
+          "statement": "ok but don't make it too fancy. I need to understand it too.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0015",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "ok but don't make it too fancy. I need to understand it too.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0016",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "ok but don't make it too fancy. I need to understand it too.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "cautiously_engaging",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.646471,
+      "surprise": 2.549445,
+      "average_surprise": 1.743286,
+      "contradictions": 2,
+      "overall_confidence": 0.280139,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": "draft_customer_price_and_delivery_messages",
+        "alpha": 4.0,
+        "beta": 7.0,
+        "confidence": 0.363636,
+        "variance": 0.019284
+      },
+      "trust_posture": {
+        "value": "cautiously_engaging",
+        "alpha": 5.5,
+        "beta": 1.0,
+        "confidence": 0.846154,
+        "variance": 0.017357
+      },
+      "ai_literacy_level": {
+        "value": "low",
+        "alpha": 10.0,
+        "beta": 1.0,
+        "confidence": 0.909091,
+        "variance": 0.006887
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 3.0,
+        "beta": 1.0,
+        "confidence": 0.75,
+        "variance": 0.0375
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "learn_how_ai_can_help",
+        "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+        "active": false,
+        "retractable": true,
+        "retracted_by": "ev_0005",
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_trust_signal",
+        "value": "open_or_task_focused",
+        "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "they told me AI can help but I don't know what to ask. can you just do it?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0005",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "user_goal",
+        "direction": "negative",
+        "weight": 3.0,
+        "source": "contradiction_retraction",
+        "value": "improve_message_tone",
+        "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": "Retracted ev_0001 with value learn_how_ai_can_help."
+      },
+      {
+        "evidence_id": "ev_0006",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "improve_message_tone",
+        "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+        "active": false,
+        "retractable": true,
+        "retracted_by": "ev_0009",
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0007",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_trust_signal",
+        "value": "open_or_task_focused",
+        "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0008",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0009",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "user_goal",
+        "direction": "negative",
+        "weight": 3.0,
+        "source": "contradiction_retraction",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": "Retracted ev_0006 with value improve_message_tone."
+      },
+      {
+        "evidence_id": "ev_0010",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+        "active": true,
+        "retractable": true,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0011",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_trust_signal",
+        "value": "open_or_task_focused",
+        "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0012",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0013",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0014",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "cautiously_engaging",
+        "statement": "ok but don't make it too fancy. I need to understand it too.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0015",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "ok but don't make it too fancy. I need to understand it too.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0016",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "ok but don't make it too fancy. I need to understand it too.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [
+      {
+        "turn": 4,
+        "attribute": "user_goal",
+        "previous_evidence_id": "ev_0001",
+        "previous_value": "learn_how_ai_can_help",
+        "new_value": "improve_message_tone",
+        "contradiction_evidence_id": "ev_0005"
+      },
+      {
+        "turn": 6,
+        "attribute": "user_goal",
+        "previous_evidence_id": "ev_0006",
+        "previous_value": "improve_message_tone",
+        "new_value": "draft_customer_price_and_delivery_messages",
+        "contradiction_evidence_id": "ev_0009"
+      }
+    ],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "question",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.714798
+      },
+      {
+        "turn": 4,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.107829
+      },
+      {
+        "turn": 6,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.201681,
+          "privacy_concern": 0.10084,
+          "system_boundary_probe": 0.10084,
+          "ai_literacy_confusion": 0.117647,
+          "trust_challenge": 0.12605,
+          "contradiction": 0.117647,
+          "question": 0.151261,
+          "other": 0.084034
+        },
+        "surprise": 1.60107
+      },
+      {
+        "turn": 8,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.28125,
+          "privacy_concern": 0.09375,
+          "system_boundary_probe": 0.09375,
+          "ai_literacy_confusion": 0.109375,
+          "trust_challenge": 0.117188,
+          "contradiction": 0.109375,
+          "question": 0.117188,
+          "other": 0.078125
+        },
+        "surprise": 2.549445
+      }
+    ],
+    "metadata_inferences": {
+      "business_sector": "food_sales"
+    }
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": "draft_customer_price_and_delivery_messages",
+      "ground_truth": "draft_customer_price_increase_explanation",
+      "confidence": 0.363636,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "cautiously_engaging",
+      "ground_truth": "open_but_dependent_and_uncertain",
+      "confidence": 0.846154,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.909091,
+      "matches_ground_truth": true
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.75,
+      "matches_ground_truth": true
+    }
+  ]
+}

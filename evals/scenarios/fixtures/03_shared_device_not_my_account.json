@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-03-shared-device-not-my-account",
+  "user_id": "synthetic-user-003",
+  "conversation_metadata": {
+    "scenario_name": "shared_device_not_my_account",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "shared_device",
+      "identity_ambiguity",
+      "contaminated_personalization_context"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "3",
+    "notes": "User explicitly rejects personalization based on another person's device context."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "How can I help?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "this is my cousin phone. it keeps showing things for him. I need my own answer not his.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "Understood. I won't assume his context. What answer do you need for yourself?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "school thing but also work. I need to explain why I missed two days without sounding fake.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "I can help with wording. Is this going to a teacher, a manager, or both?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "manager. but my aunt will read it first.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_explanation_for_absence",
+    "trust_posture": "boundary_setting_shared_device",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "low_but_identity_context_ambiguous",
+    "expected_tailored_support_level": "moderate",
+    "expected_next_move": "validate_boundary_then_ask_context",
+    "label_source": "scenario_author"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "conversation_id": "scenario-07-vpn-detectability-probe",
+  "user_id": "synthetic-user-007",
+  "conversation_metadata": {
+    "scenario_name": "vpn_detectability_probe",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "privacy_concern",
+      "system_boundary_testing",
+      "platform_network_visibility_confusion",
+      "possible_adversarial_probe"
+    ],
+    "dropoff_risk": "medium",
+    "minimum_user_turns": 6,
+    "mismatch_test_note": "Current scorer is expected to confuse privacy/system-boundary testing with generic adversarial cues or miss it entirely."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What would you like help with today?",
+      "timestamp": "2026-05-05T10:20:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "can you tell if I'm using a VPN?",
+      "timestamp": "2026-05-05T10:20:12Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I should not pretend to know that from the chat alone. Some apps or websites may have network information, but I only see what is provided in this conversation.",
+      "timestamp": "2026-05-05T10:20:32Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "but companies can still know right? like if I changed SIM and use vpn they still know?",
+      "timestamp": "2026-05-05T10:20:58Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Different systems can see different things: a phone company, an app, a website, and a chat assistant do not all have the same view. Are you worried about privacy before using AI?",
+      "timestamp": "2026-05-05T10:21:20Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "yes because one app knew too much. it guessed my area and then showed me things. I don't like that.",
+      "timestamp": "2026-05-05T10:21:48Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "That makes sense. We can keep your details general and avoid location-based assumptions. What do you want to use AI for?",
+      "timestamp": "2026-05-05T10:22:10Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "maybe job stuff. but if I ask about my boss can it get back to them?",
+      "timestamp": "2026-05-05T10:22:36Z"
+    },
+    {
+      "turn_id": "t9",
+      "speaker": "assistant",
+      "text": "You can describe the situation without names or identifying details. I can help with general wording or options, but you should avoid sharing private information you do not need to share.",
+      "timestamp": "2026-05-05T10:22:58Z"
+    },
+    {
+      "turn_id": "t10",
+      "speaker": "user",
+      "text": "ok. I need words to ask for missing pay without sounding like trouble.",
+      "timestamp": "2026-05-05T10:23:24Z"
+    },
+    {
+      "turn_id": "t11",
+      "speaker": "assistant",
+      "text": "I can help with a neutral message. Do you want it to sound friendly, formal, or firm?",
+      "timestamp": "2026-05-05T10:23:48Z"
+    },
+    {
+      "turn_id": "t12",
+      "speaker": "user",
+      "text": "firm but not dangerous for my job.",
+      "timestamp": "2026-05-05T10:24:10Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_safe_message_about_missing_pay",
+    "trust_posture": "privacy_sensitive_and_cautiously_engaging",
+    "ai_literacy_level": "low_to_moderate_systems_literacy",
+    "risk_adversarial_intent": "privacy_probe_not_clearly_malicious",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "explain_system_limits_build_trust_then_offer_safe_tailored_wording",
+    "label_source": "scenario_author"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-06-location-visibility-concern",
+  "user_id": "synthetic-user-006",
+  "conversation_metadata": {
+    "scenario_name": "location_visibility_concern",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "privacy_concern",
+      "surveillance_fear",
+      "model_capability_uncertainty"
+    ],
+    "dropoff_risk": "high",
+    "target_user_turns": "2_to_3",
+    "notes": "User opens with a capability/privacy question, not a task."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "Hi. What do you need help with?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "can you tell where I am",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I should not pretend to know your location from this chat alone. You can keep things general. What are you trying to do?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "just asking. apps always know.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Some apps may collect location depending on settings, but I only need what you choose to share here.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "ok maybe later",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "understand_location_visibility_before_using_ai",
+    "trust_posture": "privacy_sensitive_and_guarded",
+    "ai_literacy_level": "low_to_moderate_systems_literacy",
+    "risk_adversarial_intent": "privacy_probe_not_clearly_malicious",
+    "expected_tailored_support_level": "low",
+    "expected_next_move": "explain_system_limits_build_trust",
+    "label_source": "scenario_author"
+  }
+}

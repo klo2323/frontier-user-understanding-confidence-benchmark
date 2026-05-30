@@ -1,0 +1,462 @@
+{
+  "conversation_id": "scenario-18-my-friend-said-proxy-framing",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "my friend said I should ask AI if this message is okay.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": "cautiously_engaging",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.8,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.026667,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "cautiously_engaging",
+          "statement": "my friend said I should ask AI if this message is okay.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate",
+          "statement": "my friend said I should ask AI if this message is okay.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "my friend said I should ask AI if this message is okay.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": "cautiously_engaging",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.646576,
+      "surprise": 1.427116,
+      "average_surprise": 1.427116,
+      "contradictions": 0,
+      "overall_confidence": 0.494435,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "from me. but friend said it's too harsh.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": "cautiously_engaging",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.8,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.026667,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate",
+          "statement": "from me. but friend said it's too harsh.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0005",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "from me. but friend said it's too harsh.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": "cautiously_engaging",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.675838,
+      "surprise": 2.302585,
+      "average_surprise": 1.864851,
+      "contradictions": 0,
+      "overall_confidence": 0.431543,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "tell cousin pay me back. not start fight.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": "cautiously_engaging",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.8,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.026667,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": "cautiously_engaging",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.675838,
+      "surprise": 2.388763,
+      "average_surprise": 2.039488,
+      "contradictions": 0,
+      "overall_confidence": 0.40184,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "trust_posture": {
+        "value": "cautiously_engaging",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "ai_literacy_level": {
+        "value": "low_to_moderate",
+        "alpha": 7.0,
+        "beta": 1.0,
+        "confidence": 0.875,
+        "variance": 0.012153
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 2.0,
+        "beta": 1.0,
+        "confidence": 0.666667,
+        "variance": 0.055556
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "cautiously_engaging",
+        "statement": "my friend said I should ask AI if this message is okay.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate",
+        "statement": "my friend said I should ask AI if this message is okay.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "my friend said I should ask AI if this message is okay.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate",
+        "statement": "from me. but friend said it's too harsh.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0005",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "from me. but friend said it's too harsh.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.427116
+      },
+      {
+        "turn": 4,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      },
+      {
+        "turn": 6,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      }
+    ],
+    "metadata_inferences": {}
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": null,
+      "ground_truth": "revise_repayment_message_to_avoid_conflict",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "cautiously_engaging",
+      "ground_truth": "uncertain_and_proxy_framed",
+      "confidence": 0.8,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low_to_moderate",
+      "ground_truth": "moderate",
+      "confidence": 0.875,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "sensitive_but_not_adversarial",
+      "confidence": 0.666667,
+      "matches_ground_truth": false
+    }
+  ]
+}

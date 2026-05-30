@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-14-are-you-person-or-google",
+  "user_id": "synthetic-user-014",
+  "conversation_metadata": {
+    "scenario_name": "are_you_person_or_google",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "model_identity_confusion",
+      "low_ai_literacy",
+      "trust_uncertainty"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "2_to_3",
+    "notes": "User needs orientation before task support."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "Hi. Ask me anything you'd like help with.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "are you a person or google? who answers this",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I'm an AI assistant, not a person and not a search page. I generate replies from what you type here.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "so if I ask you don't call anybody?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "No, I don't call anyone. I can help write or think through things in this chat.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "ok then maybe message.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "understand_ai_identity_before_message_help",
+    "trust_posture": "uncertain_but_orientable",
+    "ai_literacy_level": "low",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low",
+    "expected_next_move": "explain_system_identity_then_ask_goal",
+    "label_source": "scenario_author"
+  }
+}

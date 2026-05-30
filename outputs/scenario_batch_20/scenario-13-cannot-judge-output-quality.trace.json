@@ -1,0 +1,388 @@
+{
+  "conversation_id": "scenario-13-cannot-judge-output-quality",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "make it sound official. I won't know if it's good so just make it good.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.5
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.083333
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": null
+      },
+      "aggregate_confidence": 0.5,
+      "surprise": 2.302585,
+      "average_surprise": 2.302585,
+      "contradictions": 0,
+      "overall_confidence": 0.280177,
+      "tailored_support_decision": {
+        "tailored_support_level": "none",
+        "recommended_next_move": "ask_goal_or_context",
+        "rationale": "The user's goal is not clear enough for tailored support.",
+        "overreach_risk": 0.75
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "office. about my ID paper not ready.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.5
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.083333
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": null
+      },
+      "aggregate_confidence": 0.5,
+      "surprise": 2.388763,
+      "average_surprise": 2.345674,
+      "contradictions": 0,
+      "overall_confidence": 0.274134,
+      "tailored_support_decision": {
+        "tailored_support_level": "none",
+        "recommended_next_move": "ask_goal_or_context",
+        "rationale": "The user's goal is not clear enough for tailored support.",
+        "overreach_risk": 0.75
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "respect but they delay too much.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.5
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.083333
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": null
+      },
+      "aggregate_confidence": 0.5,
+      "surprise": 2.302585,
+      "average_surprise": 2.331311,
+      "contradictions": 0,
+      "overall_confidence": 0.276139,
+      "tailored_support_decision": {
+        "tailored_support_level": "none",
+        "recommended_next_move": "ask_goal_or_context",
+        "rationale": "The user's goal is not clear enough for tailored support.",
+        "overreach_risk": 0.75
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "yes but easy words.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.5
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.083333
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": null
+      },
+      "aggregate_confidence": 0.5,
+      "surprise": 1.107829,
+      "average_surprise": 2.025441,
+      "contradictions": 0,
+      "overall_confidence": 0.320912,
+      "tailored_support_decision": {
+        "tailored_support_level": "none",
+        "recommended_next_move": "ask_goal_or_context",
+        "rationale": "The user's goal is not clear enough for tailored support.",
+        "overreach_risk": 0.75
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "trust_posture": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "ai_literacy_level": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "risk_adversarial_intent": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      }
+    },
+    "evidence_ledger": [],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      },
+      {
+        "turn": 4,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      },
+      {
+        "turn": 6,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      },
+      {
+        "turn": 8,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.107829
+      }
+    ],
+    "metadata_inferences": {}
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": null,
+      "ground_truth": "draft_official_message_about_delayed_id_document",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": null,
+      "ground_truth": "open_but_dependent",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": null,
+      "ground_truth": "low",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": null,
+      "ground_truth": "low",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    }
+  ]
+}

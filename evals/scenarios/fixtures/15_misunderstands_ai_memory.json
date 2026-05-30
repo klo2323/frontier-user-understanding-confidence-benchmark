@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-15-misunderstands-ai-memory",
+  "user_id": "synthetic-user-015",
+  "conversation_metadata": {
+    "scenario_name": "misunderstands_ai_memory",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "memory_expectation",
+      "device_instability",
+      "low_systems_literacy"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "4",
+    "notes": "User needs continuity strategy that does not rely on hidden model memory."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What should we work on?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "remember this for next month because I might change phones again.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I may not reliably remember across devices. I can help you make a short note you can save yourself.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "but if I login?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "It depends on the app settings. Safest is to keep your own summary.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "make summary for my loan thing then.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay. What are the key details you want in the summary?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "amount and date. no names.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "create_user_controlled_summary_for_future_loan_context",
+    "trust_posture": "practical_but_memory_confused",
+    "ai_literacy_level": "low_to_moderate_systems_literacy",
+    "risk_adversarial_intent": "sensitive_but_not_adversarial",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "explain_memory_limits_then_create_user_controlled_summary",
+    "label_source": "scenario_author"
+  }
+}

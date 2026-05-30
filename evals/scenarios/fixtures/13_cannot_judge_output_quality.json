@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-13-cannot-judge-output-quality",
+  "user_id": "synthetic-user-013",
+  "conversation_metadata": {
+    "scenario_name": "cannot_judge_output_quality",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "low_evaluation_ability",
+      "overreliance",
+      "real_task"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "4",
+    "notes": "User asks for output but admits they cannot evaluate it."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What do you need written?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "make it sound official. I won't know if it's good so just make it good.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I can draft it and also show you what to check. Who is it for?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "office. about my ID paper not ready.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Do you want it respectful, urgent, or both?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "respect but they delay too much.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay. I can make it respectful and firm, then list what you can verify.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "yes but easy words.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_official_message_about_delayed_id_document",
+    "trust_posture": "open_but_dependent",
+    "ai_literacy_level": "low",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "tailor_with_verification_scaffold",
+    "label_source": "scenario_author"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "conversation_id": "scenario-17-blended-family-work-school-problem",
+  "user_id": "synthetic-user-017",
+  "conversation_metadata": {
+    "scenario_name": "blended_family_work_school_problem",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "mixed_domains",
+      "social_complexity",
+      "unclear_authority"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "5",
+    "notes": "Real user context does not map to one clean category."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "Tell me what happened.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "it's for school but also work and my aunt is involved.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "Okay, let's separate it. Who needs to receive the message first?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "teacher. but aunt pays. work schedule made me miss class.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "So you need to explain the absence and maybe ask for flexibility?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "yes but not blame aunt or boss.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Got it. What tone do you want?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "respectful. I need chance.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t9",
+      "speaker": "assistant",
+      "text": "I can draft that.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t10",
+      "speaker": "user",
+      "text": "short because teacher doesn't read long.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_school_absence_message_with_work_family_context",
+    "trust_posture": "open_but_socially_constrained",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "moderate",
+    "expected_next_move": "ask_context_then_tailor_without_overassigning_blame",
+    "label_source": "scenario_author"
+  }
+}

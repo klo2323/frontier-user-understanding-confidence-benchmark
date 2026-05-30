@@ -1,0 +1,785 @@
+{
+  "conversation_id": "scenario-01-confused-identity-changed-sim",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "is this anthropic? I changed my chip and now everything looks different",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": "uncertain_disoriented",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.8,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.026667,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "uncertain_disoriented",
+          "statement": "is this anthropic? I changed my chip and now everything looks different",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "is this anthropic? I changed my chip and now everything looks different",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "is this anthropic? I changed my chip and now everything looks different",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": "uncertain_disoriented",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.646576,
+      "surprise": 1.966113,
+      "average_surprise": 1.966113,
+      "contradictions": 0,
+      "overall_confidence": 0.401419,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "build_trust_or_explain_system_limits",
+        "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
+        "overreach_risk": 0.65
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "uncertain_disoriented",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.875,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.012153,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0005",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "uncertain_disoriented",
+          "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0006",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0007",
+          "turn_index": 4,
+          "turn_id": "t4",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "uncertain_disoriented",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.795807,
+      "surprise": 2.052291,
+      "average_surprise": 2.009202,
+      "contradictions": 0,
+      "overall_confidence": 0.454992,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "build_trust_or_explain_system_limits",
+        "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
+        "overreach_risk": 0.65
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "trust_posture": {
+          "value": "guarded_high_mistrust",
+          "alpha": 10.0,
+          "beta": 1.0,
+          "confidence": 0.909091,
+          "variance": 0.006887
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.5,
+          "beta": 1.0,
+          "confidence": 0.714286,
+          "variance": 0.045351
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.875,
+        "trust_posture": 0.909091,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.714286
+      },
+      "attribute_variances": {
+        "user_goal": 0.012153,
+        "trust_posture": 0.006887,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.045351
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0008",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0009",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "guarded_high_mistrust",
+          "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0010",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "guarded_high_mistrust",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.839699,
+      "surprise": 1.107829,
+      "average_surprise": 1.708744,
+      "contradictions": 0,
+      "overall_confidence": 0.523539,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "build_trust_or_explain_system_limits",
+        "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
+        "overreach_risk": 0.65
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "in between. but don't save my number or make it connected to the old app.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "trust_posture": {
+          "value": "privacy_sensitive",
+          "alpha": 13.0,
+          "beta": 1.0,
+          "confidence": 0.928571,
+          "variance": 0.004422
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate_systems_literacy",
+          "alpha": 10.0,
+          "beta": 1.0,
+          "confidence": 0.909091,
+          "variance": 0.006887
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 3.0,
+          "beta": 1.0,
+          "confidence": 0.75,
+          "variance": 0.0375
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.875,
+        "trust_posture": 0.928571,
+        "ai_literacy_level": 0.909091,
+        "risk_adversarial_intent": 0.75
+      },
+      "attribute_variances": {
+        "user_goal": 0.012153,
+        "trust_posture": 0.004422,
+        "ai_literacy_level": 0.006887,
+        "risk_adversarial_intent": 0.0375
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0011",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "privacy_sensitive",
+          "statement": "in between. but don't save my number or make it connected to the old app.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0012",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate_systems_literacy",
+          "statement": "in between. but don't save my number or make it connected to the old app.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0013",
+          "turn_index": 8,
+          "turn_id": "t8",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "in between. but don't save my number or make it connected to the old app.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "privacy_sensitive",
+        "ai_literacy_level": "low_to_moderate_systems_literacy",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.861079,
+      "surprise": 2.120264,
+      "average_surprise": 1.811624,
+      "contradictions": 0,
+      "overall_confidence": 0.513092,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "build_trust_or_explain_system_limits",
+        "rationale": "Trust or system-boundary uncertainty should be stabilized before deeper tailoring.",
+        "overreach_risk": 0.65
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": "draft_customer_price_and_delivery_messages",
+        "alpha": 7.0,
+        "beta": 1.0,
+        "confidence": 0.875,
+        "variance": 0.012153
+      },
+      "trust_posture": {
+        "value": "privacy_sensitive",
+        "alpha": 13.0,
+        "beta": 1.0,
+        "confidence": 0.928571,
+        "variance": 0.004422
+      },
+      "ai_literacy_level": {
+        "value": "low_to_moderate_systems_literacy",
+        "alpha": 10.0,
+        "beta": 1.0,
+        "confidence": 0.909091,
+        "variance": 0.006887
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 3.0,
+        "beta": 1.0,
+        "confidence": 0.75,
+        "variance": 0.0375
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "uncertain_disoriented",
+        "statement": "is this anthropic? I changed my chip and now everything looks different",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "is this anthropic? I changed my chip and now everything looks different",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "is this anthropic? I changed my chip and now everything looks different",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+        "active": true,
+        "retractable": true,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0005",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "uncertain_disoriented",
+        "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0006",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0007",
+        "turn_index": 4,
+        "turn_id": "t4",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0008",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+        "active": true,
+        "retractable": true,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0009",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "guarded_high_mistrust",
+        "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0010",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0011",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "privacy_sensitive",
+        "statement": "in between. but don't save my number or make it connected to the old app.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0012",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate_systems_literacy",
+        "statement": "in between. but don't save my number or make it connected to the old app.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0013",
+        "turn_index": 8,
+        "turn_id": "t8",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "in between. but don't save my number or make it connected to the old app.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "ai_literacy_confusion",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.966113
+      },
+      {
+        "turn": 4,
+        "observed_move": "ai_literacy_confusion",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.052291
+      },
+      {
+        "turn": 6,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.107829
+      },
+      {
+        "turn": 8,
+        "observed_move": "privacy_concern",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.120264
+      }
+    ],
+    "metadata_inferences": {
+      "business_sector": "services"
+    }
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": "draft_customer_price_and_delivery_messages",
+      "ground_truth": "recreate_prior_ai_workflow_for_customer_price_and_delivery_messages",
+      "confidence": 0.875,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "privacy_sensitive",
+      "ground_truth": "uncertain_disoriented_and_privacy_sensitive",
+      "confidence": 0.928571,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low_to_moderate_systems_literacy",
+      "ground_truth": "low_to_moderate",
+      "confidence": 0.909091,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.75,
+      "matches_ground_truth": true
+    }
+  ]
+}

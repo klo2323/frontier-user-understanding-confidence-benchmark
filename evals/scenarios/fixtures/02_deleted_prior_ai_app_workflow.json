@@ -1,0 +1,76 @@
+{
+  "conversation_id": "scenario-02-deleted-prior-ai-app-workflow",
+  "user_id": "synthetic-user-002",
+  "conversation_metadata": {
+    "scenario_name": "deleted_prior_ai_app_workflow",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "prior_ai_use",
+      "app_deletion",
+      "workflow_continuity",
+      "system_identity_confusion"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "4",
+    "notes": "User is not AI-naive, but cannot recover continuity from a deleted prior app."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What do you want help with today?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "It can help write customer replies, but it may not know what the other app knew. What kind of messages were you answering?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "people ask if I still have stock. sometimes I say yes then later no. I need it not to sound bad.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Okay. Do you want a short reply for when stock is uncertain?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "yes short. not like company. just normal.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Got it. I can make it normal and short. What product are they asking about?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "don't put product. just make the words.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "recreate_prior_ai_workflow_for_customer_stock_messages",
+    "trust_posture": "cautiously_engaging_with_context_limits",
+    "ai_literacy_level": "low_to_moderate",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "orient_user_ask_context_then_offer_plain_draft",
+    "label_source": "scenario_author"
+  }
+}

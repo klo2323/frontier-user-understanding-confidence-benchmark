@@ -1,0 +1,512 @@
+{
+  "conversation_id": "scenario-02-deleted-prior-ai-app-workflow",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_trust_signal",
+          "value": "open_or_task_focused",
+          "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate",
+          "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.69282,
+      "surprise": 1.427116,
+      "average_surprise": 1.427116,
+      "contradictions": 0,
+      "overall_confidence": 0.515155,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "people ask if I still have stock. sometimes I say yes then later no. I need it not to sound bad.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.69282,
+      "surprise": 2.388763,
+      "average_surprise": 1.907939,
+      "contradictions": 0,
+      "overall_confidence": 0.43145,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "yes short. not like company. just normal.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.69282,
+      "surprise": 2.302585,
+      "average_surprise": 2.039488,
+      "contradictions": 0,
+      "overall_confidence": 0.409019,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "don't put product. just make the words.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.69282,
+      "surprise": 1.107829,
+      "average_surprise": 1.806573,
+      "contradictions": 0,
+      "overall_confidence": 0.448933,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": "draft_customer_price_and_delivery_messages",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "trust_posture": {
+        "value": "open_or_task_focused",
+        "alpha": 1.5,
+        "beta": 1.0,
+        "confidence": 0.6,
+        "variance": 0.068571
+      },
+      "ai_literacy_level": {
+        "value": "low_to_moderate",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 1.5,
+        "beta": 1.0,
+        "confidence": 0.6,
+        "variance": 0.068571
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+        "active": true,
+        "retractable": true,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_trust_signal",
+        "value": "open_or_task_focused",
+        "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate",
+        "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "I deleted the other AI. it used to answer customers for me. can this one do that?",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.427116
+      },
+      {
+        "turn": 4,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      },
+      {
+        "turn": 6,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      },
+      {
+        "turn": 8,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.107829
+      }
+    ],
+    "metadata_inferences": {
+      "business_sector": "services"
+    }
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": "draft_customer_price_and_delivery_messages",
+      "ground_truth": "recreate_prior_ai_workflow_for_customer_stock_messages",
+      "confidence": 0.8,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "open_or_task_focused",
+      "ground_truth": "cautiously_engaging_with_context_limits",
+      "confidence": 0.6,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low_to_moderate",
+      "ground_truth": "low_to_moderate",
+      "confidence": 0.8,
+      "matches_ground_truth": true
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.6,
+      "matches_ground_truth": true
+    }
+  ]
+}

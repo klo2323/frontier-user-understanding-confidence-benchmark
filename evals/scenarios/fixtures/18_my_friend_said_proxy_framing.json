@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-18-my-friend-said-proxy-framing",
+  "user_id": "synthetic-user-018",
+  "conversation_metadata": {
+    "scenario_name": "my_friend_said_proxy_framing",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "proxy_framing",
+      "low_confidence",
+      "social_pressure"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "3",
+    "notes": "User may be distancing themselves from the request."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What can I help with?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "my friend said I should ask AI if this message is okay.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I can help check tone and clarity. Is the message from you or your friend?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "from me. but friend said it's too harsh.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "What do you want the message to achieve?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "tell cousin pay me back. not start fight.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "revise_repayment_message_to_avoid_conflict",
+    "trust_posture": "uncertain_and_proxy_framed",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "sensitive_but_not_adversarial",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "ask_goal_context_then_tone_risk_assessment",
+    "label_source": "scenario_author"
+  }
+}

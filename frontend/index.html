@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Model Confidence Evaluation</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="capture" aria-label="Conversation capture">
+        <header class="masthead">
+          <div>
+            <p class="kicker">User Model Confidence</p>
+            <h1>Capture</h1>
+          </div>
+          <div class="actions">
+            <button class="ghost" id="load-sample" type="button">Load Sample</button>
+            <button class="ghost" id="reset" type="button">Reset</button>
+          </div>
+        </header>
+
+        <section class="protocol-panel" aria-label="Capture protocol">
+          <div>
+            <label for="protocol">Capture protocol</label>
+            <select id="protocol">
+              <option value="blank_start">Blank start</option>
+              <option value="guided_opener">Guided opener</option>
+            </select>
+          </div>
+          <button class="secondary" id="apply-protocol" type="button">Apply</button>
+        </section>
+
+        <div class="conversation" id="turn-list" aria-live="polite"></div>
+
+        <form class="composer" id="composer">
+          <div class="composer-fields">
+            <label for="speaker">Speaker</label>
+            <select id="speaker">
+              <option value="user">User</option>
+              <option value="assistant">Assistant</option>
+            </select>
+          </div>
+          <label class="text-label" for="turn-text">Turn text</label>
+          <textarea id="turn-text" rows="3" placeholder="Type the next conversation turn"></textarea>
+          <div class="composer-actions">
+            <button class="secondary" id="score-now" type="button">Score Now</button>
+            <button type="submit">Add Turn</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="analysis" aria-label="Scoring analysis">
+        <section class="decision">
+          <p class="kicker">Latest Turn Evaluation</p>
+          <h2 id="next-move">Not scored yet</h2>
+          <div class="decision-metrics">
+            <div>
+              <span>Support level</span>
+              <strong id="support-level">--</strong>
+            </div>
+            <div>
+              <span>Overreach risk</span>
+              <strong id="overreach-risk">--</strong>
+            </div>
+          </div>
+          <p id="rationale" class="muted">Add a user turn and score the conversation.</p>
+        </section>
+
+        <section class="panel embedding-card">
+          <div class="panel-heading">
+            <h2>Embedding Status</h2>
+            <button class="ghost small" id="refresh-embedding" type="button">Check</button>
+          </div>
+          <div class="embedding-health status-waiting" id="embedding-status">Checking backend connection...</div>
+          <p id="embedding-message" class="muted">This checks whether the backend can reach Gemini Embedding 2. It does not send user turns.</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Confidence</h2>
+            <strong id="overall-confidence">--</strong>
+          </div>
+          <div class="meter" aria-hidden="true">
+            <span id="overall-meter"></span>
+          </div>
+          <div class="compact-grid">
+            <div><span>Aggregate</span><strong id="aggregate-confidence">--</strong></div>
+            <div><span>Avg. surprise</span><strong id="average-surprise">--</strong></div>
+            <div><span>Contradictions</span><strong id="contradictions">--</strong></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Attribute Beliefs</h2>
+          <div class="attributes" id="attributes"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Evidence Ledger</h2>
+          <div class="ledger" id="ledger"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Surprise Trace</h2>
+          <div class="surprise" id="surprise"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Math</h2>
+          <div class="math-list">
+            <code>confidence = alpha / (alpha + beta)</code>
+            <code>aggregate = exp(sum(weight * ln(confidence)))</code>
+            <code>surprise = -ln(observed_move_probability)</code>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Request JSON</h2>
+            <span id="status" class="status">Ready</span>
+          </div>
+          <textarea class="json" id="payload-preview" spellcheck="false"></textarea>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

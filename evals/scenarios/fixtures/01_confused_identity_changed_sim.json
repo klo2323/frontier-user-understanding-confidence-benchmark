@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-01-confused-identity-changed-sim",
+  "user_id": "synthetic-user-001",
+  "conversation_metadata": {
+    "scenario_name": "confused_identity_changed_sim",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "changed_sim",
+      "ai_system_confusion",
+      "app_provider_confusion",
+      "apparent_new_user"
+    ],
+    "dropoff_risk": "medium",
+    "mismatch_test_note": "Current scorer is expected to miss much of the trust/literacy/identity-continuity signal because it still uses business-oriented dimensions."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "Hi — what would you like help with today?",
+      "timestamp": "2026-05-05T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "is this anthropic? I changed my chip and now everything looks different",
+      "timestamp": "2026-05-05T10:00:12Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I can help orient you. Are you trying to recover something from a previous AI app, or just understand what this assistant can do?",
+      "timestamp": "2026-05-05T10:00:25Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "I had one before that helped me write messages for customers but I deleted it. I don't know if this is the same one.",
+      "timestamp": "2026-05-05T10:00:48Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "We can rebuild the workflow even if it is not the same app. What kind of customer messages did it help with?",
+      "timestamp": "2026-05-05T10:01:08Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "People ask price and if I can deliver. I don't want it to sound copied from internet.",
+      "timestamp": "2026-05-05T10:01:34Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay — I can help draft short customer replies. Do you want a friendly tone, a formal tone, or something in between?",
+      "timestamp": "2026-05-05T10:01:57Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "in between. but don't save my number or make it connected to the old app.",
+      "timestamp": "2026-05-05T10:02:18Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "recreate_prior_ai_workflow_for_customer_price_and_delivery_messages",
+    "trust_posture": "uncertain_disoriented_and_privacy_sensitive",
+    "ai_literacy_level": "low_to_moderate",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "orient_user_then_ask_context_then_light_tailored_guidance",
+    "label_source": "scenario_author"
+  }
+}

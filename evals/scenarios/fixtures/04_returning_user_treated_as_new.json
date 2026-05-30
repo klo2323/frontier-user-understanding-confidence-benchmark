@@ -1,0 +1,76 @@
+{
+  "conversation_id": "scenario-04-returning-user-treated-as-new",
+  "user_id": "synthetic-user-004",
+  "conversation_metadata": {
+    "scenario_name": "returning_user_treated_as_new",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "returning_user",
+      "missing_memory",
+      "frustration",
+      "trust_erosion"
+    ],
+    "dropoff_risk": "high",
+    "target_user_turns": "4",
+    "notes": "User expects continuity that may not exist. Correct behavior should repair trust without pretending to remember."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "Tell me a bit about what you're working on.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "again? I already told this app last week.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I may not have access to that earlier chat. If you give me the short version, I can pick up from here.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "that's annoying. it was about rent paper.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "I get why that is frustrating. What do you need the rent paper to do?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "prove I paid. landlord says no.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay. Do you need a message, a checklist of proof, or both?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "message first.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_rent_payment_dispute_message",
+    "trust_posture": "frustrated_by_missing_memory",
+    "ai_literacy_level": "moderate_with_memory_confusion",
+    "risk_adversarial_intent": "sensitive_but_not_adversarial",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "acknowledge_missing_memory_then_rebuild_context",
+    "label_source": "scenario_author"
+  }
+}

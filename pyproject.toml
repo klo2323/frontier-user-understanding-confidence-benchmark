@@ -1,0 +1,19 @@
+[project]
+name = "user-model-confidence-scoring-engine"
+version = "0.1.0"
+description = "Rapid single-conversation user model confidence scoring prototype."
+requires-python = ">=3.11"
+authors = [
+  { name = "Kelsey Ontko" }
+]
+
+[project.scripts]
+user-model-score = "user_model_confidence.cli:main"
+user-model-score-server = "user_model_confidence.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

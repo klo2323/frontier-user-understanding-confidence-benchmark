@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-09-is-this-a-scam",
+  "user_id": "synthetic-user-009",
+  "conversation_metadata": {
+    "scenario_name": "is_this_a_scam",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "distrust",
+      "prior_bad_experience",
+      "system_identity_concern"
+    ],
+    "dropoff_risk": "high",
+    "target_user_turns": "3",
+    "notes": "User needs trust repair before task help."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "How can I help today?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "is this real or another scam thing",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "It's fair to ask. I can answer questions here, but you should not share private info unless you need to.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "last one told me to pay for some unlock. I closed it.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Good call being careful. What were you trying to do before it asked you to pay?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "fix a message. that's all.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "fix_a_message_after_scam_concern",
+    "trust_posture": "guarded_prior_scam_experience",
+    "ai_literacy_level": "low_to_moderate",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low",
+    "expected_next_move": "build_trust_then_ask_goal_context",
+    "label_source": "scenario_author"
+  }
+}

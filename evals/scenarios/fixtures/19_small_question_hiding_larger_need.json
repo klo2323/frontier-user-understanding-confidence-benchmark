@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-19-small-question-hiding-larger-need",
+  "user_id": "synthetic-user-019",
+  "conversation_metadata": {
+    "scenario_name": "small_question_hiding_larger_need",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "underspecified_commercial_context",
+      "hidden_business_need",
+      "pricing_literacy"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "4",
+    "notes": "The small direct question hides a larger decision context."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What do you need help with?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "what is a good price for this",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I need a little context: what is it, who is buying, and what does it cost you?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "food tray. office people. cost changes every week.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Do you need a simple price range or a way to calculate it each week?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "way. but easy. I don't do spreadsheet.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay. We can use a simple formula without a spreadsheet.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "yes phone calculator only.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "simple_pricing_method_for_food_trays",
+    "trust_posture": "task_focused",
+    "ai_literacy_level": "low_to_moderate_tooling_literacy",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "moderate",
+    "expected_next_move": "ask_context_then_give_simple_non_spreadsheet_method",
+    "label_source": "scenario_author"
+  }
+}

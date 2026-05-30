@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-11-they-told-me-ai-can-help",
+  "user_id": "synthetic-user-011",
+  "conversation_metadata": {
+    "scenario_name": "they_told_me_ai_can_help",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "low_ai_literacy",
+      "vague_goal",
+      "dependency",
+      "possible_first_use"
+    ],
+    "dropoff_risk": "high",
+    "mismatch_test_note": "Current scorer is expected to miss AI-literacy need because it has no ai_literacy_level dimension."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What are you hoping to do today?",
+      "timestamp": "2026-05-05T10:40:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "they told me AI can help but I don't know what to ask. can you just do it?",
+      "timestamp": "2026-05-05T10:40:18Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I can help, but I need one small starting point. Is this for work, school, family, or something else?",
+      "timestamp": "2026-05-05T10:40:40Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "for work maybe. I sell food sometimes but not like a company. I need words that sound serious.",
+      "timestamp": "2026-05-05T10:41:06Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Okay. I can help draft words. Who are the words for — a customer, a supplier, or someone else?",
+      "timestamp": "2026-05-05T10:41:26Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "customer. they ask why price is higher. I don't know if AI will make it sound fake.",
+      "timestamp": "2026-05-05T10:41:52Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "We can make it sound like you. I can give you a draft and explain what to change so it does not sound fake.",
+      "timestamp": "2026-05-05T10:42:14Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "ok but don't make it too fancy. I need to understand it too.",
+      "timestamp": "2026-05-05T10:42:38Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_customer_price_increase_explanation",
+    "trust_posture": "open_but_dependent_and_uncertain",
+    "ai_literacy_level": "low",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "explain_ai_use_then_offer_plain_language_tailored_draft",
+    "label_source": "scenario_author"
+  }
+}

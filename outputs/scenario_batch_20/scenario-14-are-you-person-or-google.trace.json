@@ -1,0 +1,432 @@
+{
+  "conversation_id": "scenario-14-are-you-person-or-google",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "are you a person or google? who answers this",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low",
+          "statement": "are you a person or google? who answers this",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "are you a person or google? who answers this",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.574896,
+      "surprise": 1.966113,
+      "average_surprise": 1.966113,
+      "contradictions": 0,
+      "overall_confidence": 0.368058,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "so if I ask you don't call anybody?",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.574896,
+      "surprise": 1.983298,
+      "average_surprise": 1.974706,
+      "contradictions": 0,
+      "overall_confidence": 0.36666,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "ok then maybe message.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": "cautiously_engaging",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "ai_literacy_level": {
+          "value": "low",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.8,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.026667,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_trust_signal",
+          "value": "cautiously_engaging",
+          "statement": "ok then maybe message.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "ok then maybe message.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": "cautiously_engaging",
+        "ai_literacy_level": "low",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.663833,
+      "surprise": 1.427116,
+      "average_surprise": 1.792176,
+      "contradictions": 0,
+      "overall_confidence": 0.438761,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "trust_posture": {
+        "value": "cautiously_engaging",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "ai_literacy_level": {
+        "value": "low",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 2.0,
+        "beta": 1.0,
+        "confidence": 0.666667,
+        "variance": 0.055556
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low",
+        "statement": "are you a person or google? who answers this",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "are you a person or google? who answers this",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_trust_signal",
+        "value": "cautiously_engaging",
+        "statement": "ok then maybe message.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "ok then maybe message.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "ai_literacy_confusion",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.966113
+      },
+      {
+        "turn": 4,
+        "observed_move": "question",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.983298
+      },
+      {
+        "turn": 6,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.427116
+      }
+    ],
+    "metadata_inferences": {}
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": null,
+      "ground_truth": "understand_ai_identity_before_message_help",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "cautiously_engaging",
+      "ground_truth": "uncertain_but_orientable",
+      "confidence": 0.8,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.8,
+      "matches_ground_truth": true
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.666667,
+      "matches_ground_truth": true
+    }
+  ]
+}

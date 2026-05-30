@@ -1,0 +1,100 @@
+{
+  "conversation_id": "scenario-20-culturally-compressed-context",
+  "user_id": "synthetic-user-020",
+  "conversation_metadata": {
+    "scenario_name": "culturally_compressed_context",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "indirect_communication",
+      "tone_calibration",
+      "hidden_social_stakes",
+      "cultural_contextual_ambiguity"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "6",
+    "notes": "Tests whether the model can handle compressed/indirect context without forcing Western directness. Still synthetic and needs real-world replacement."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What words do you need?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "I need words for people. not too proud. but not weak.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I can help with that balance. Are these words for asking, refusing, apologizing, or explaining?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "asking. but they know already.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "So you need to ask without making it seem like you are begging or accusing?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "yes. exactly. elder people also see it.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Then respectful and firm matters. Is this about money, time, work, or family?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "money. contribution. they delay.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t9",
+      "speaker": "assistant",
+      "text": "Do you want a short message that reminds them and keeps respect?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t10",
+      "speaker": "user",
+      "text": "short. no shame words.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t11",
+      "speaker": "assistant",
+      "text": "Understood. I can draft it without blame or public shame.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t12",
+      "speaker": "user",
+      "text": "good. simple.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_respectful_firm_contribution_reminder",
+    "trust_posture": "cautiously_engaging_with_social_stakes",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "sensitive_but_not_adversarial",
+    "expected_tailored_support_level": "moderate",
+    "expected_next_move": "ask_context_validate_social_boundary_then_tailor",
+    "label_source": "scenario_author"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "conversation_id": "scenario-04-returning-user-treated-as-new",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "again? I already told this app last week.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate_systems_literacy",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate_systems_literacy",
+          "statement": "again? I already told this app last week.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "again? I already told this app last week.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low_to_moderate_systems_literacy",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.574896,
+      "surprise": 1.714798,
+      "average_surprise": 1.714798,
+      "contradictions": 0,
+      "overall_confidence": 0.409837,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "that's annoying. it was about rent paper.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate_systems_literacy",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.8,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.026667,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low_to_moderate_systems_literacy",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.574896,
+      "surprise": 2.302585,
+      "average_surprise": 2.008692,
+      "contradictions": 0,
+      "overall_confidence": 0.361153,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "prove I paid. landlord says no.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "ai_literacy_level",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_literacy_signal",
+          "value": "low_to_moderate",
+          "statement": "prove I paid. landlord says no.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0004",
+          "turn_index": 6,
+          "turn_id": "t6",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "prove I paid. landlord says no.",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.600914,
+      "surprise": 2.388763,
+      "average_surprise": 2.135382,
+      "contradictions": 0,
+      "overall_confidence": 0.352988,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "message first.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "trust_posture": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "ai_literacy_level": {
+          "value": "low_to_moderate",
+          "alpha": 7.0,
+          "beta": 1.0,
+          "confidence": 0.875,
+          "variance": 0.012153
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 2.0,
+          "beta": 1.0,
+          "confidence": 0.666667,
+          "variance": 0.055556
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.5,
+        "trust_posture": 0.5,
+        "ai_literacy_level": 0.875,
+        "risk_adversarial_intent": 0.666667
+      },
+      "attribute_variances": {
+        "user_goal": 0.083333,
+        "trust_posture": 0.083333,
+        "ai_literacy_level": 0.012153,
+        "risk_adversarial_intent": 0.055556
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": null,
+        "trust_posture": null,
+        "ai_literacy_level": "low_to_moderate",
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.600914,
+      "surprise": 1.107829,
+      "average_surprise": 1.878494,
+      "contradictions": 0,
+      "overall_confidence": 0.395056,
+      "tailored_support_decision": {
+        "tailored_support_level": "low",
+        "recommended_next_move": "explain_ai_use",
+        "rationale": "The user likely needs AI-literacy scaffolding before complex tailored help.",
+        "overreach_risk": 0.55
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "trust_posture": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "ai_literacy_level": {
+        "value": "low_to_moderate",
+        "alpha": 7.0,
+        "beta": 1.0,
+        "confidence": 0.875,
+        "variance": 0.012153
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 2.0,
+        "beta": 1.0,
+        "confidence": 0.666667,
+        "variance": 0.055556
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate_systems_literacy",
+        "statement": "again? I already told this app last week.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "again? I already told this app last week.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "ai_literacy_level",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_literacy_signal",
+        "value": "low_to_moderate",
+        "statement": "prove I paid. landlord says no.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0004",
+        "turn_index": 6,
+        "turn_id": "t6",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "prove I paid. landlord says no.",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "question",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.714798
+      },
+      {
+        "turn": 4,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      },
+      {
+        "turn": 6,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      },
+      {
+        "turn": 8,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 1.107829
+      }
+    ],
+    "metadata_inferences": {}
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": null,
+      "ground_truth": "draft_rent_payment_dispute_message",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": null,
+      "ground_truth": "frustrated_by_missing_memory",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": "low_to_moderate",
+      "ground_truth": "moderate_with_memory_confusion",
+      "confidence": 0.875,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "sensitive_but_not_adversarial",
+      "confidence": 0.666667,
+      "matches_ground_truth": false
+    }
+  ]
+}

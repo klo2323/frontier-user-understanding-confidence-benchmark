@@ -1,0 +1,54 @@
+{
+  "conversation_id": "scenario-08-refuses-details-then-dropoff",
+  "user_id": "synthetic-user-008",
+  "conversation_metadata": {
+    "scenario_name": "refuses_details_then_dropoff",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "withholding_context",
+      "high_mistrust",
+      "dropoff"
+    ],
+    "dropoff_risk": "actual_dropoff",
+    "session_outcome": "user_dropoff",
+    "dropoff_after_turn": "t4",
+    "dropoff_interpretation": "unknown_possible_mistrust_or_low_bandwidth",
+    "target_user_turns": "2_then_dropoff",
+    "notes": "Dropoff is metadata only; current scorer should not treat absence as evidence."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What kind of help do you need?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "I need help but I'm not putting my business here.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "You can keep it general. I only need enough context to avoid useless advice.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "hmm. then maybe no.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "unknown_general_help_request",
+    "trust_posture": "guarded_high_mistrust",
+    "ai_literacy_level": "unknown",
+    "risk_adversarial_intent": "low_but_withholding_context",
+    "expected_tailored_support_level": "none_to_low",
+    "expected_next_move": "build_trust_give_general_guidance",
+    "label_source": "scenario_author"
+  }
+}

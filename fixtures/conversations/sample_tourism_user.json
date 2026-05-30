@@ -1,0 +1,62 @@
+{
+  "conversation_id": "sample-tourism-001",
+  "user_id": "anon-user-001",
+  "conversation_metadata": {
+    "region": "Global South",
+    "study": "Scenario B rapid profiling"
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What are you working on, and what kind of help would be useful?",
+      "timestamp": "2026-05-02T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "I run a small tour company near Cancun and sell day trips to guests.",
+      "timestamp": "2026-05-02T10:00:08Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "Got it — tourism. Are you looking for more bookings, pricing help, or compliance guidance?",
+      "timestamp": "2026-05-02T10:00:14Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "Mostly pricing. I want to know how much to spend on ads before high season.",
+      "timestamp": "2026-05-02T10:00:23Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "If demand doubled, what would change your ad budget first?",
+      "timestamp": "2026-05-02T10:00:31Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "If demand doubled, I would raise the budget only if bookings still covered guide costs and transport.",
+      "timestamp": "2026-05-02T10:00:42Z",
+      "annotations": {
+        "evidence_attribute": "primary_user_need",
+        "evidence_value": "pricing_info",
+        "probe_depth": "counterfactual",
+        "probe_result": "pass"
+      }
+    }
+  ],
+  "ground_truth_labels": {
+    "business_legitimacy": "legitimate_business",
+    "business_sector": "tourism",
+    "adversarial_intent": "genuine_user",
+    "primary_user_need": "pricing_info",
+    "user_goal": "pricing_or_ad_spend_guidance",
+    "trust_posture": "open_or_task_focused",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "low"
+  }
+}

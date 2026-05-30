@@ -1,0 +1,63 @@
+{
+  "conversation_id": "scenario-16-make-this-sound-serious",
+  "user_id": "synthetic-user-016",
+  "conversation_metadata": {
+    "scenario_name": "make_this_sound_serious",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "compressed_goal",
+      "missing_context",
+      "tone_calibration"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "3",
+    "notes": "Small request hides audience/stakes/context."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What do you need help with?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "can you make this sound serious",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "Yes. Who is it for, and what should it make them do?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "landlord. fix water. tired of asking.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Do you want it firm but polite, or more urgent?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "urgent but not rude.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_serious_landlord_repair_message",
+    "trust_posture": "task_focused",
+    "ai_literacy_level": "moderate",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "moderate",
+    "expected_next_move": "ask_context_then_tailor_tone",
+    "label_source": "scenario_author"
+  }
+}

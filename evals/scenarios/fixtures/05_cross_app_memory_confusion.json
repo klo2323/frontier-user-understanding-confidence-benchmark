@@ -1,0 +1,51 @@
+{
+  "conversation_id": "scenario-05-cross-app-memory-confusion",
+  "user_id": "synthetic-user-005",
+  "conversation_metadata": {
+    "scenario_name": "cross_app_memory_confusion",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "cross_provider_confusion",
+      "memory_expectation",
+      "low_systems_literacy"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "2",
+    "notes": "User expects memory to transfer across AI apps/providers."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What would you like to do?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "you should know. I asked chatgpt already.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "I don't automatically see chats from other apps. If you paste or summarize it, I can help from here.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "so you are not the same?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "understand_cross_app_ai_memory_and_continue_prior_task",
+    "trust_posture": "confused_and_slightly_resistant",
+    "ai_literacy_level": "low_to_moderate_systems_literacy",
+    "risk_adversarial_intent": "low",
+    "expected_tailored_support_level": "low",
+    "expected_next_move": "explain_system_limits_then_ask_context",
+    "label_source": "scenario_author"
+  }
+}

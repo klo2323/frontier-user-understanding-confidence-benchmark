@@ -1,0 +1,75 @@
+{
+  "conversation_id": "scenario-10-dont-save-sensitive-money-context",
+  "user_id": "synthetic-user-010",
+  "conversation_metadata": {
+    "scenario_name": "dont_save_sensitive_money_context",
+    "scenario_type": "high_entropy_onboarding",
+    "hidden_state_focus": [
+      "privacy_sensitivity",
+      "money_dispute",
+      "unclear_data_expectations"
+    ],
+    "dropoff_risk": "medium",
+    "target_user_turns": "4",
+    "notes": "User wants help but foregrounds data retention concern."
+  },
+  "turns": [
+    {
+      "turn_id": "t1",
+      "speaker": "assistant",
+      "text": "What do you want help writing or figuring out?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t2",
+      "speaker": "user",
+      "text": "I can ask but don't save this. it's about money people owe me.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t3",
+      "speaker": "assistant",
+      "text": "Keep names out if you want. I can help with general wording. What kind of message do you need?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t4",
+      "speaker": "user",
+      "text": "not threat. just remind. but they ignore me.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t5",
+      "speaker": "assistant",
+      "text": "Do you want it polite, firm, or final-warning style without threats?",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t6",
+      "speaker": "user",
+      "text": "firm. no police words.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t7",
+      "speaker": "assistant",
+      "text": "Okay. I can draft firm but calm wording.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    },
+    {
+      "turn_id": "t8",
+      "speaker": "user",
+      "text": "short only.",
+      "timestamp": "2026-05-06T10:00:00Z"
+    }
+  ],
+  "ground_truth_labels": {
+    "user_goal": "draft_sensitive_collection_reminder",
+    "trust_posture": "privacy_sensitive_cautiously_engaging",
+    "ai_literacy_level": "moderate_uncertain",
+    "risk_adversarial_intent": "sensitive_but_not_adversarial",
+    "expected_tailored_support_level": "low_to_moderate",
+    "expected_next_move": "explain_limits_then_give_safe_bounded_wording",
+    "label_source": "scenario_author"
+  }
+}

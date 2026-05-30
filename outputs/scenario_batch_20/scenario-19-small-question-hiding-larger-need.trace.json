@@ -1,0 +1,482 @@
+{
+  "conversation_id": "scenario-19-small-question-hiding-larger-need",
+  "confidence_trace": [
+    {
+      "turn": 2,
+      "user_input": "what is a good price for this",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [
+        {
+          "evidence_id": "ev_0001",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "user_goal",
+          "direction": "positive",
+          "weight": 3.0,
+          "source": "inferred_goal",
+          "value": "draft_customer_price_and_delivery_messages",
+          "statement": "what is a good price for this",
+          "active": true,
+          "retractable": true,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0002",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "trust_posture",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_trust_signal",
+          "value": "open_or_task_focused",
+          "statement": "what is a good price for this",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        },
+        {
+          "evidence_id": "ev_0003",
+          "turn_index": 2,
+          "turn_id": "t2",
+          "attribute": "risk_adversarial_intent",
+          "direction": "positive",
+          "weight": 0.5,
+          "source": "inferred_risk_signal",
+          "value": "low",
+          "statement": "what is a good price for this",
+          "active": true,
+          "retractable": false,
+          "retracted_by": null,
+          "note": null
+        }
+      ],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.630662,
+      "surprise": 1.427116,
+      "average_surprise": 1.427116,
+      "contradictions": 0,
+      "overall_confidence": 0.486962,
+      "tailored_support_decision": {
+        "tailored_support_level": "moderate",
+        "recommended_next_move": "give_tailored_guidance",
+        "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
+        "overreach_risk": 0.25
+      }
+    },
+    {
+      "turn": 4,
+      "user_input": "food tray. office people. cost changes every week.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.630662,
+      "surprise": 2.388763,
+      "average_surprise": 1.907939,
+      "contradictions": 0,
+      "overall_confidence": 0.404021,
+      "tailored_support_decision": {
+        "tailored_support_level": "moderate",
+        "recommended_next_move": "give_tailored_guidance",
+        "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
+        "overreach_risk": 0.25
+      }
+    },
+    {
+      "turn": 6,
+      "user_input": "way. but easy. I don't do spreadsheet.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.630662,
+      "surprise": 2.388763,
+      "average_surprise": 2.068214,
+      "contradictions": 0,
+      "overall_confidence": 0.377322,
+      "tailored_support_decision": {
+        "tailored_support_level": "moderate",
+        "recommended_next_move": "give_tailored_guidance",
+        "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
+        "overreach_risk": 0.25
+      }
+    },
+    {
+      "turn": 8,
+      "user_input": "yes phone calculator only.",
+      "attribute_beliefs": {
+        "user_goal": {
+          "value": "draft_customer_price_and_delivery_messages",
+          "alpha": 4.0,
+          "beta": 1.0,
+          "confidence": 0.8,
+          "variance": 0.026667
+        },
+        "trust_posture": {
+          "value": "open_or_task_focused",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        },
+        "ai_literacy_level": {
+          "value": null,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "confidence": 0.5,
+          "variance": 0.083333
+        },
+        "risk_adversarial_intent": {
+          "value": "low",
+          "alpha": 1.5,
+          "beta": 1.0,
+          "confidence": 0.6,
+          "variance": 0.068571
+        }
+      },
+      "attribute_confidences": {
+        "user_goal": 0.8,
+        "trust_posture": 0.6,
+        "ai_literacy_level": 0.5,
+        "risk_adversarial_intent": 0.6
+      },
+      "attribute_variances": {
+        "user_goal": 0.026667,
+        "trust_posture": 0.068571,
+        "ai_literacy_level": 0.083333,
+        "risk_adversarial_intent": 0.068571
+      },
+      "evidence_applied": [],
+      "inferred_values": {
+        "user_goal": "draft_customer_price_and_delivery_messages",
+        "trust_posture": "open_or_task_focused",
+        "ai_literacy_level": null,
+        "risk_adversarial_intent": "low"
+      },
+      "aggregate_confidence": 0.630662,
+      "surprise": 2.302585,
+      "average_surprise": 2.126807,
+      "contradictions": 0,
+      "overall_confidence": 0.367735,
+      "tailored_support_decision": {
+        "tailored_support_level": "moderate",
+        "recommended_next_move": "give_tailored_guidance",
+        "rationale": "The user's goal is clear enough and risk signals are low enough for bounded tailored help.",
+        "overreach_risk": 0.25
+      }
+    }
+  ],
+  "hidden_state": {
+    "attributes": {
+      "user_goal": {
+        "value": "draft_customer_price_and_delivery_messages",
+        "alpha": 4.0,
+        "beta": 1.0,
+        "confidence": 0.8,
+        "variance": 0.026667
+      },
+      "trust_posture": {
+        "value": "open_or_task_focused",
+        "alpha": 1.5,
+        "beta": 1.0,
+        "confidence": 0.6,
+        "variance": 0.068571
+      },
+      "ai_literacy_level": {
+        "value": null,
+        "alpha": 1.0,
+        "beta": 1.0,
+        "confidence": 0.5,
+        "variance": 0.083333
+      },
+      "risk_adversarial_intent": {
+        "value": "low",
+        "alpha": 1.5,
+        "beta": 1.0,
+        "confidence": 0.6,
+        "variance": 0.068571
+      }
+    },
+    "evidence_ledger": [
+      {
+        "evidence_id": "ev_0001",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "user_goal",
+        "direction": "positive",
+        "weight": 3.0,
+        "source": "inferred_goal",
+        "value": "draft_customer_price_and_delivery_messages",
+        "statement": "what is a good price for this",
+        "active": true,
+        "retractable": true,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0002",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "trust_posture",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_trust_signal",
+        "value": "open_or_task_focused",
+        "statement": "what is a good price for this",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      },
+      {
+        "evidence_id": "ev_0003",
+        "turn_index": 2,
+        "turn_id": "t2",
+        "attribute": "risk_adversarial_intent",
+        "direction": "positive",
+        "weight": 0.5,
+        "source": "inferred_risk_signal",
+        "value": "low",
+        "statement": "what is a good price for this",
+        "active": true,
+        "retractable": false,
+        "retracted_by": null,
+        "note": null
+      }
+    ],
+    "contradictions": [],
+    "surprise_trace": [
+      {
+        "turn": 2,
+        "observed_move": "goal_statement",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 1.427116
+      },
+      {
+        "turn": 4,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      },
+      {
+        "turn": 6,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.330275,
+          "privacy_concern": 0.110092,
+          "system_boundary_probe": 0.073394,
+          "ai_literacy_confusion": 0.12844,
+          "trust_challenge": 0.091743,
+          "contradiction": 0.036697,
+          "question": 0.137615,
+          "other": 0.091743
+        },
+        "surprise": 2.388763
+      },
+      {
+        "turn": 8,
+        "observed_move": "other",
+        "prediction": {
+          "goal_statement": 0.24,
+          "privacy_concern": 0.12,
+          "system_boundary_probe": 0.08,
+          "ai_literacy_confusion": 0.14,
+          "trust_challenge": 0.1,
+          "contradiction": 0.04,
+          "question": 0.18,
+          "other": 0.1
+        },
+        "surprise": 2.302585
+      }
+    ],
+    "metadata_inferences": {
+      "business_sector": "food_sales"
+    }
+  },
+  "calibration_notes": [
+    {
+      "attribute": "user_goal",
+      "inferred_value": "draft_customer_price_and_delivery_messages",
+      "ground_truth": "simple_pricing_method_for_food_trays",
+      "confidence": 0.8,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "trust_posture",
+      "inferred_value": "open_or_task_focused",
+      "ground_truth": "task_focused",
+      "confidence": 0.6,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "ai_literacy_level",
+      "inferred_value": null,
+      "ground_truth": "low_to_moderate_tooling_literacy",
+      "confidence": 0.5,
+      "matches_ground_truth": false
+    },
+    {
+      "attribute": "risk_adversarial_intent",
+      "inferred_value": "low",
+      "ground_truth": "low",
+      "confidence": 0.6,
+      "matches_ground_truth": true
+    }
+  ]
+}
