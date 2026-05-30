@@ -41,12 +41,6 @@ That makes it relevant to social cognition, AI literacy, trust calibration, pers
 - Diagnostic batch report across the 20 scenario fixtures.
 - A local score-only HTTP endpoint and static evaluation console.
 
-## What This Repo Does Not Claim
-
-The current prototype is not calibrated on real populations, not production-ready, not a full cultural heat map, not a substitute for researcher/labeler review, not proof that one provider is socially smarter than another, and not a chatbot or assistant product.
-
-Synthetic scenarios are diagnostic seed cases. Real captured conversations and researcher/labeler review are required before making calibration claims.
-
 ## Quick Start
 
 Run tests:
