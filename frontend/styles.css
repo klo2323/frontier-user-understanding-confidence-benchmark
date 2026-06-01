@@ -488,3 +488,82 @@ code {
     max-width: 100%;
   }
 }
+
+
+input {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  min-width: 0;
+  padding: 10px;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(23, 107, 93, 0.16);
+}
+
+.lane-tabs {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+
+.lane-tab {
+  background: #e7ece7;
+  color: var(--ink);
+}
+
+.lane-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.lane-panel.hidden,
+.hidden {
+  display: none;
+}
+
+.lane-note {
+  font-size: 0.84rem;
+  margin: 7px 0 0;
+}
+
+.native-list {
+  display: grid;
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+.capture-item {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  justify-content: start;
+  min-height: 36px;
+  text-align: left;
+}
+
+.capture-item:hover {
+  background: #dbe4de;
+}
+
+.small-text {
+  font-size: 0.82rem;
+}
+
+#model-name {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  .lane-tabs {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
