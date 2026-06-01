@@ -43,12 +43,6 @@ That makes it relevant to social cognition, AI literacy, trust calibration, pers
 - A controlled frontier-model router for complete turn capture.
 - Capture-channel agnostic API endpoints designed to support mobile-first field data collection from a separate field app.
 
-## What This Repo Does Not Claim
-
-The current prototype is not calibrated on real populations, not production-ready, not a full cultural heat map, not a substitute for researcher/labeler review, not proof that one provider is socially smarter than another, and not a chatbot or assistant product.
-
-Synthetic scenarios are diagnostic seed cases. Real captured conversations and researcher/labeler review are required before making calibration claims.
-
 ## Field Capture Lanes
 
 - **Lane 1: Instrumented capture feed** — a separate field app or capture client can post real frontier-model turns to `/native-capture`; saved local captures live under `data/native_capture/`.
@@ -59,6 +53,7 @@ Both lanes feed the same probabilistic turn-by-turn scorer. The target is user-u
 Mobile-first field data is expected. This repo defines the scoring and capture API contract; mobile implementation belongs in the separate field-app repo.
 
 See `docs/FIELD_CAPTURE_ARCHITECTURE.md`.
+
 
 ## Quick Start
 
@@ -99,6 +94,8 @@ PYTHONPATH=src python -B scripts/serve_frontend.py --port 8090
 - `outputs/scenario_batch_20/` — generated traces.
 - `reports/scenario_batch_20_diagnostic.md` — batch diagnostic summary.
 - `frontend/` — local evaluation console for scoring transcripts.
+- `docs/FIELD_CAPTURE_ARCHITECTURE.md` — capture lane contract for instrumentation feed and controlled router.
+- `data/native_capture/` — local, gitignored Lane 1 captures from instrumentation clients.
 - `data/router_runs/` — local, gitignored Lane 2 runs from configured frontier providers.
 
 ## Ground Truth And Calibration
