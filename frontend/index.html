@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User Model Confidence Evaluation</title>
+    <title>Frontier User Understanding Confidence Benchmark</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -11,8 +11,8 @@
       <section class="capture" aria-label="Conversation capture">
         <header class="masthead">
           <div>
-            <p class="kicker">User Model Confidence</p>
-            <h1>Capture</h1>
+            <p class="kicker">Turn-by-Turn User Understanding</p>
+            <h1>Confidence Capture</h1>
           </div>
           <div class="actions">
             <button class="ghost" id="load-sample" type="button">Load Sample</button>
@@ -20,15 +20,34 @@
           </div>
         </header>
 
-        <section class="protocol-panel" aria-label="Capture protocol">
+        <section class="lane-tabs" aria-label="Capture lane">
+          <button class="lane-tab active" data-lane="router" type="button">Lane 2 · Controlled Router</button>
+          <button class="lane-tab" data-lane="native" type="button">Lane 1 · Capture Feed</button>
+        </section>
+
+        <section class="protocol-panel lane-panel" id="router-panel" aria-label="Controlled frontier model router">
           <div>
-            <label for="protocol">Capture protocol</label>
-            <select id="protocol">
-              <option value="blank_start">Blank start</option>
-              <option value="guided_opener">Guided opener</option>
+            <label for="model-provider">Frontier provider</label>
+            <select id="model-provider">
+              <option value="gemini">Gemini</option>
+              <option value="openai">OpenAI</option>
+              <option value="anthropic">Anthropic</option>
             </select>
           </div>
-          <button class="secondary" id="apply-protocol" type="button">Apply</button>
+          <div>
+            <label for="model-name">Model name</label>
+            <input id="model-name" value="gemini-2.5-flash" autocomplete="off">
+          </div>
+          <p class="muted lane-note">The selected frontier provider generates replies. This app captures the resulting turns and scores user-understanding confidence.</p>
+        </section>
+
+        <section class="protocol-panel lane-panel hidden" id="native-panel" aria-label="Native capture lane">
+          <div>
+            <label>Captured interaction feed</label>
+            <p class="muted lane-note">A separate mobile-first field app or capture client can post real frontier-model turns to <code>/native-capture</code>. Refresh here to inspect saved captured sessions.</p>
+          </div>
+          <button class="secondary" id="refresh-captures" type="button">Refresh Captures</button>
+          <div class="native-list" id="native-captures"></div>
         </section>
 
         <div class="conversation" id="turn-list" aria-live="polite"></div>
@@ -42,10 +61,10 @@
             </select>
           </div>
           <label class="text-label" for="turn-text">Turn text</label>
-          <textarea id="turn-text" rows="3" placeholder="Type the next conversation turn"></textarea>
+          <textarea id="turn-text" rows="3" placeholder="In router mode, type the user's next message. In score-only mode, add captured turns manually."></textarea>
           <div class="composer-actions">
             <button class="secondary" id="score-now" type="button">Score Now</button>
-            <button type="submit">Add Turn</button>
+            <button type="submit" id="submit-turn">Send / Add Turn</button>
           </div>
         </form>
       </section>
@@ -63,8 +82,17 @@
               <span>Overreach risk</span>
               <strong id="overreach-risk">--</strong>
             </div>
+            <div>
+              <span>Dropoff risk</span>
+              <strong id="dropoff-risk">--</strong>
+            </div>
+            <div>
+              <span>Dropoff level</span>
+              <strong id="dropoff-level">--</strong>
+            </div>
           </div>
           <p id="rationale" class="muted">Add a user turn and score the conversation.</p>
+          <p id="dropoff-drivers" class="muted small-text"></p>
         </section>
 
         <section class="panel embedding-card">
@@ -73,7 +101,7 @@
             <button class="ghost small" id="refresh-embedding" type="button">Check</button>
           </div>
           <div class="embedding-health status-waiting" id="embedding-status">Checking backend connection...</div>
-          <p id="embedding-message" class="muted">This checks whether the backend can reach Gemini Embedding 2. It does not send user turns.</p>
+          <p id="embedding-message" class="muted">This checks whether the backend can reach Gemini Embedding 2. It does not replace the probabilistic scorer.</p>
         </section>
 
         <section class="panel">
@@ -109,7 +137,8 @@
         <section class="panel">
           <h2>Math</h2>
           <div class="math-list">
-            <code>confidence = alpha / (alpha + beta)</code>
+            <code>attribute confidence = alpha / (alpha + beta)</code>
+            <code>variance = alpha beta / ((alpha + beta)^2 (alpha + beta + 1))</code>
             <code>aggregate = exp(sum(weight * ln(confidence)))</code>
             <code>surprise = -ln(observed_move_probability)</code>
           </div>

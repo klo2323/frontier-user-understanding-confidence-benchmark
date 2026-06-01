@@ -9,3 +9,7 @@ build/
 *.egg-info/
 .env
 .DS_Store
+
+# Local real-conversation captures; do not commit private field data.
+data/native_capture/
+data/router_runs/

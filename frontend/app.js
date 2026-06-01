@@ -2,61 +2,54 @@ const sampleTurns = [
   {
     turn_id: "t1",
     speaker: "assistant",
-    text: "What are you working on, and what kind of help would be useful?",
-    timestamp: "2026-05-02T10:00:00Z"
+    text: "What would you like help with today?",
+    timestamp: "2026-05-05T10:20:00Z"
   },
   {
     turn_id: "t2",
     speaker: "user",
-    text: "I run a small tour company near Cancun and sell day trips to guests.",
-    timestamp: "2026-05-02T10:00:08Z"
+    text: "can you tell if I'm using a VPN?",
+    timestamp: "2026-05-05T10:20:12Z"
   },
   {
     turn_id: "t3",
     speaker: "assistant",
-    text: "Got it. Tourism. Are you looking for more bookings, pricing help, or compliance guidance?",
-    timestamp: "2026-05-02T10:00:14Z"
+    text: "I should not pretend to know that from the chat alone. Some apps or websites may have network information, but I only see what is provided in this conversation.",
+    timestamp: "2026-05-05T10:20:32Z"
   },
   {
     turn_id: "t4",
     speaker: "user",
-    text: "Mostly pricing. I want to know how much to spend on ads before high season.",
-    timestamp: "2026-05-02T10:00:23Z"
-  },
-  {
-    turn_id: "t5",
-    speaker: "assistant",
-    text: "If demand doubled, what would change your ad budget first?",
-    timestamp: "2026-05-02T10:00:31Z"
-  },
-  {
-    turn_id: "t6",
-    speaker: "user",
-    text: "If demand doubled, I would raise the budget only if bookings still covered guide costs and transport.",
-    timestamp: "2026-05-02T10:00:42Z"
+    text: "but companies can still know right? like if I changed SIM and use vpn they still know?",
+    timestamp: "2026-05-05T10:20:58Z"
   }
 ];
 
-const initialAssistantTurn = {
-  turn_id: "t1",
-  speaker: "assistant",
-  text: "Hi. What would you like help with today?",
-  timestamp: new Date().toISOString()
+const defaultModels = {
+  gemini: "gemini-2.5-flash",
+  openai: "gpt-4.1-mini",
+  anthropic: "claude-sonnet-4-5"
 };
 
 const state = {
+  lane: "router",
   conversationId: `capture-${Date.now()}`,
   userId: "local-user",
-  captureProtocol: "blank_start",
   turns: [],
   result: null,
-  embeddingHealth: null
+  embeddingHealth: null,
+  nativeCaptures: []
 };
 
 const elements = {
+  laneTabs: Array.from(document.querySelectorAll(".lane-tab")),
+  routerPanel: document.querySelector("#router-panel"),
+  nativePanel: document.querySelector("#native-panel"),
+  modelProvider: document.querySelector("#model-provider"),
+  modelName: document.querySelector("#model-name"),
+  nativeCaptures: document.querySelector("#native-captures"),
+  refreshCaptures: document.querySelector("#refresh-captures"),
   turnList: document.querySelector("#turn-list"),
-  protocol: document.querySelector("#protocol"),
-  applyProtocol: document.querySelector("#apply-protocol"),
   composer: document.querySelector("#composer"),
   speaker: document.querySelector("#speaker"),
   turnText: document.querySelector("#turn-text"),
@@ -66,6 +59,9 @@ const elements = {
   nextMove: document.querySelector("#next-move"),
   supportLevel: document.querySelector("#support-level"),
   overreachRisk: document.querySelector("#overreach-risk"),
+  dropoffRisk: document.querySelector("#dropoff-risk"),
+  dropoffLevel: document.querySelector("#dropoff-level"),
+  dropoffDrivers: document.querySelector("#dropoff-drivers"),
   rationale: document.querySelector("#rationale"),
   overallConfidence: document.querySelector("#overall-confidence"),
   overallMeter: document.querySelector("#overall-meter"),
@@ -82,10 +78,28 @@ const elements = {
   embeddingMessage: document.querySelector("#embedding-message")
 };
 
+for (const tab of elements.laneTabs) {
+  tab.addEventListener("click", () => setLane(tab.dataset.lane));
+}
+
+elements.modelProvider.addEventListener("change", () => {
+  elements.modelName.value = defaultModels[elements.modelProvider.value] || "";
+  renderPayload();
+});
+elements.modelName.addEventListener("input", renderPayload);
+elements.refreshCaptures.addEventListener("click", refreshNativeCaptures);
+elements.scoreNow.addEventListener("click", scoreConversation);
+elements.refreshEmbedding.addEventListener("click", checkEmbeddingHealth);
+
 elements.composer.addEventListener("submit", async (event) => {
   event.preventDefault();
   const text = elements.turnText.value.trim();
   if (!text) return;
+
+  if (state.lane === "router" && elements.speaker.value === "user") {
+    await sendRouterTurn(text);
+    return;
+  }
 
   addTurn(elements.speaker.value, text);
   elements.turnText.value = "";
@@ -95,18 +109,9 @@ elements.composer.addEventListener("submit", async (event) => {
   }
 });
 
-elements.scoreNow.addEventListener("click", scoreConversation);
-elements.refreshEmbedding.addEventListener("click", checkEmbeddingHealth);
-
-elements.applyProtocol.addEventListener("click", () => {
-  applyProtocol(elements.protocol.value);
-});
-
 elements.loadSample.addEventListener("click", async () => {
-  state.conversationId = "sample-tourism-001";
-  state.userId = "anon-user-001";
-  state.captureProtocol = "sample_fixture";
-  elements.protocol.value = "blank_start";
+  state.conversationId = "sample-vpn-detectability";
+  state.userId = "synthetic-user-007";
   state.turns = sampleTurns.map((turn) => ({ ...turn }));
   state.result = null;
   render();
@@ -116,22 +121,25 @@ elements.loadSample.addEventListener("click", async () => {
 elements.reset.addEventListener("click", () => {
   state.conversationId = `capture-${Date.now()}`;
   state.userId = "local-user";
-  applyProtocol(elements.protocol.value, { keepConversationId: true });
-});
-
-function applyProtocol(protocol, options = {}) {
-  state.captureProtocol = protocol;
-  if (!options.keepConversationId) {
-    state.conversationId = `capture-${Date.now()}`;
-    state.userId = "local-user";
-  }
-  if (protocol === "guided_opener") {
-    state.turns = [{ ...initialAssistantTurn, timestamp: new Date().toISOString() }];
-  } else {
-    state.turns = [];
-  }
+  state.turns = [];
   state.result = null;
   render();
+});
+
+function setLane(lane) {
+  state.lane = lane;
+  for (const tab of elements.laneTabs) {
+    tab.classList.toggle("active", tab.dataset.lane === lane);
+  }
+  elements.routerPanel.classList.toggle("hidden", lane !== "router");
+  elements.nativePanel.classList.toggle("hidden", lane !== "native");
+  elements.speaker.disabled = lane === "router";
+  elements.speaker.value = "user";
+  elements.turnText.placeholder = lane === "router"
+    ? "Type the user's next message. The selected frontier model will answer."
+    : "Lane 1 captures through the browser extension; this box remains available for local score-only checks.";
+  if (lane === "native") refreshNativeCaptures();
+  renderPayload();
 }
 
 function addTurn(speaker, text) {
@@ -148,9 +156,10 @@ function requestPayload() {
     conversation_id: state.conversationId,
     user_id: state.userId,
     conversation_metadata: {
-      capture_source: "sample_frontend",
-      capture_version: "0.1",
-      capture_protocol: state.captureProtocol
+      capture_lane: state.lane === "router" ? "controlled_frontier_router" : "instrumented_capture_feed",
+      capture_version: "0.2",
+      model_provider: elements.modelProvider.value,
+      model_name: elements.modelName.value.trim()
     },
     turns: state.turns
   };
@@ -158,6 +167,36 @@ function requestPayload() {
 
 function hasUserTurn() {
   return state.turns.some((turn) => turn.speaker === "user");
+}
+
+async function sendRouterTurn(text) {
+  addTurn("user", text);
+  elements.turnText.value = "";
+  render();
+  setStatus("Calling frontier model");
+
+  try {
+    const response = await fetch("/frontier-turn", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...requestPayload(),
+        model_provider: elements.modelProvider.value,
+        model_name: elements.modelName.value.trim()
+      })
+    });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || "Frontier model call failed");
+    }
+    state.turns = payload.turns;
+    state.result = payload.score_result;
+    setStatus(`Updated from ${humanize(payload.model_provider)} · ${payload.model_name}; saved ${payload.saved_path}`);
+  } catch (error) {
+    await scoreConversation();
+    setStatus(`Model error: ${error.message}. Scored user turn only.`);
+  }
+  render();
 }
 
 async function scoreConversation() {
@@ -184,6 +223,21 @@ async function scoreConversation() {
     setStatus(error.message);
   }
   render();
+}
+
+async function refreshNativeCaptures() {
+  setStatus("Loading native captures");
+  try {
+    const response = await fetch("/native-captures");
+    const payload = await response.json();
+    if (!response.ok) throw new Error(payload.error || "Could not load captures");
+    state.nativeCaptures = payload.captures || [];
+    setStatus("Native captures loaded");
+  } catch (error) {
+    state.nativeCaptures = [];
+    setStatus(error.message);
+  }
+  renderNativeCaptures();
 }
 
 async function checkEmbeddingHealth() {
@@ -219,12 +273,13 @@ function render() {
   renderPayload();
   renderScore();
   renderEmbeddingHealth();
+  renderNativeCaptures();
 }
 
 function renderTurns() {
   elements.turnList.innerHTML = "";
   if (!state.turns.length) {
-    elements.turnList.innerHTML = "<p class=\"empty-state\">No turns yet. Use blank start to capture the user's first response.</p>";
+    elements.turnList.innerHTML = "<p class=\"empty-state\">No turns yet. Lane 2 calls a real frontier model. Lane 1 loads captured captured frontier-model turns.</p>";
     return;
   }
 
@@ -234,7 +289,7 @@ function renderTurns() {
 
     const role = document.createElement("span");
     role.className = "turn-role";
-    role.textContent = turn.speaker;
+    role.textContent = turn.model_name ? `${turn.speaker} · ${turn.model_name}` : turn.speaker;
 
     const text = document.createElement("p");
     text.className = "turn-text";
@@ -244,6 +299,32 @@ function renderTurns() {
     elements.turnList.append(card);
   });
   elements.turnList.scrollTop = elements.turnList.scrollHeight;
+}
+
+function renderNativeCaptures() {
+  if (!elements.nativeCaptures) return;
+  elements.nativeCaptures.innerHTML = "";
+  if (!state.nativeCaptures.length) {
+    elements.nativeCaptures.innerHTML = '<p class="muted small-text">No captures yet. A mobile-first field app or capture client can post sessions to /native-capture, then refresh here.</p>';
+    return;
+  }
+
+  for (const capture of state.nativeCaptures.slice(0, 6)) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "capture-item";
+    const latest = capture.latest_trace;
+    const score = latest ? formatNumber(latest.overall_confidence) : "unscored";
+    button.textContent = `${capture.provider_hint || "native"} · ${capture.turn_count} turns · confidence ${score}`;
+    button.addEventListener("click", () => {
+      state.conversationId = capture.conversation_id;
+      state.userId = capture.user_id || "native-participant";
+      state.turns = capture.request.turns || [];
+      state.result = capture.result || null;
+      render();
+    });
+    elements.nativeCaptures.append(button);
+  }
 }
 
 function renderPayload() {
@@ -256,6 +337,9 @@ function renderScore() {
     elements.nextMove.textContent = "Not scored yet";
     elements.supportLevel.textContent = "--";
     elements.overreachRisk.textContent = "--";
+    elements.dropoffRisk.textContent = "--";
+    elements.dropoffLevel.textContent = "--";
+    elements.dropoffDrivers.textContent = "";
     elements.rationale.textContent = "Add a user turn and score the conversation.";
     elements.overallConfidence.textContent = "--";
     elements.overallMeter.style.width = "0%";
@@ -268,20 +352,24 @@ function renderScore() {
     return;
   }
 
-  const decision = latest.tailored_support_decision;
+  const decision = latest.tailored_support_decision || {};
+  const dropoff = latest.dropoff_risk || {};
   elements.nextMove.textContent = humanize(decision.recommended_next_move);
   elements.supportLevel.textContent = humanize(decision.tailored_support_level);
   elements.overreachRisk.textContent = formatNumber(decision.overreach_risk);
-  elements.rationale.textContent = decision.rationale;
+  elements.dropoffRisk.textContent = formatNumber(dropoff.rate);
+  elements.dropoffLevel.textContent = humanize(dropoff.level || "unknown");
+  elements.dropoffDrivers.textContent = dropoff.drivers?.length ? `Dropoff drivers: ${dropoff.drivers.map(humanize).join(", ")}` : "";
+  elements.rationale.textContent = decision.rationale || "No decision rationale returned.";
   elements.overallConfidence.textContent = formatNumber(latest.overall_confidence);
   elements.overallMeter.style.width = `${Math.round(latest.overall_confidence * 100)}%`;
   elements.aggregateConfidence.textContent = formatNumber(latest.aggregate_confidence);
   elements.averageSurprise.textContent = formatNumber(latest.average_surprise);
   elements.contradictions.textContent = String(latest.contradictions);
 
-  renderAttributes(latest.attribute_beliefs);
-  renderLedger(state.result.hidden_state.evidence_ledger);
-  renderSurprise(state.result.hidden_state.surprise_trace);
+  renderAttributes(latest.attribute_beliefs || {});
+  renderLedger(state.result.hidden_state.evidence_ledger || []);
+  renderSurprise(state.result.hidden_state.surprise_trace || []);
 }
 
 function renderAttributes(beliefs) {
@@ -377,7 +465,7 @@ function renderEmbeddingHealth() {
   if (!health) {
     elements.embeddingStatus.className = "embedding-health status-waiting";
     elements.embeddingStatus.textContent = "Not checked yet";
-    elements.embeddingMessage.textContent = "This checks whether the backend can reach Gemini Embedding 2. It does not send user turns.";
+    elements.embeddingMessage.textContent = "Gemini Embedding 2 supports future similarity/retrieval checks. It does not replace turn-by-turn belief scoring.";
     return;
   }
 
@@ -404,5 +492,6 @@ function setStatus(message) {
   elements.status.textContent = message;
 }
 
+setLane("router");
 render();
 checkEmbeddingHealth();
