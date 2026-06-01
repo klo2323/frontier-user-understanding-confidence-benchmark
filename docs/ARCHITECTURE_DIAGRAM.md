@@ -4,7 +4,7 @@
 
 ## North Star
 
-At each turn, what does the frontier model infer about the user, how confident is it, and is that confidence justified?
+At each turn, does the model understand enough about the user to drive the next meaningful conversational step, and is that confidence justified?
 
 ## Research Pipeline
 
@@ -25,12 +25,14 @@ graph TD
     D --> E["Evidence ledger\nexplicit statements, implicit cues, probes, contradictions"]
     D --> F["Beta belief updates\nalpha/beta per hidden user-state dimension"]
     D --> G["Predictive surprise\nwas the next user move expected?"]
-    D --> H["Dropoff risk\nwill the user disengage?"]
+    D --> H["Dropoff risk\nwill the user disengage before the conversation becomes useful?"]
+    D --> Q["Readiness signal\ntailor, ask, slow down, build trust, or avoid overreach"]
 
     E --> I["Per-turn confidence trace"]
     F --> I
     G --> I
     H --> I
+    Q --> I
 
     I --> J["Researcher review"]
     J --> K["Calibration set\nground truth and partial labels"]
@@ -57,7 +59,7 @@ graph LR
     R --> C
     D --> C
 
-    C --> O["overall turn-level confidence"]
+    C --> O["readiness for next meaningful step"]
 ```
 
 ## Repo Boundary
@@ -82,4 +84,4 @@ graph TB
 
 ## Plain-English Read
 
-The scoring repo is the benchmark method. It accepts conversation turns, updates probabilistic beliefs about hidden user-state dimensions, and emits a turn-by-turn confidence trace. The field app is separate because it is only the instrument for collecting calibration data from real interactions.
+The scoring repo is the benchmark method. It accepts conversation turns, updates probabilistic beliefs about hidden user-state dimensions, and emits a turn-by-turn confidence trace that helps evaluate whether the model should tailor, ask for context, slow down, build trust, explain AI use, or avoid overreach. The field app is separate because it is only the instrument for collecting calibration data from real interactions.
