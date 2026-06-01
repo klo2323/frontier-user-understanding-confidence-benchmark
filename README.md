@@ -3,15 +3,25 @@
 **Author / Project Owner:** Kelsey Ontko  
 **Work Attribution:** This benchmark, scoring engine, scenarios, and research framing are Kelsey Ontko’s work.
 
-This repository is a research prototype for measuring how well frontier AI models understand an apparent new or unstable user **turn by turn**.
+This repository is a research prototype for measuring calibrated user understanding in frontier AI systems when prior identity, account, device, or context signals are missing, fragmented, or misleading **turn by turn**.
 
 This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how confidence changes across hidden user-state dimensions turn by turn.
 
 It is not a chatbot product. It is not a model. It is not an adoption dashboard.
 
+## Research Contribution
+
+This repository introduces an interpretable benchmark for evaluating calibrated user understanding in frontier AI systems.
+
+The benchmark measures whether user-state beliefs are justified by turn-level evidence across four hidden dimensions: `user_goal`, `trust_posture`, `ai_literacy_level`, and `risk_adversarial_intent`.
+
+Its contribution is not a new model or chatbot interface. It is a transparent scoring protocol that exposes when a system becomes confident, what evidence drove that confidence, and whether that confidence should remain uncertain.
+
+This evaluates calibrated human understanding, not answer fluency.
+
 ## North Star
 
-> Given the conversation so far, what does a frontier model infer about the user, how confident is it, and is that confidence justified at this turn?
+> Given the conversation so far, what user-state beliefs are justified, how confident is the system, and where is that confidence unsupported or premature?
 
 The starting dimensions are:
 
@@ -40,19 +50,9 @@ That makes it relevant to social cognition, AI literacy, trust calibration, pers
 - Generated JSON and Markdown traces for inspection.
 - Diagnostic batch report across the 20 scenario fixtures.
 - A local score-only HTTP endpoint and static evaluation console.
-- A controlled frontier-model router for complete turn capture.
-- Capture-channel agnostic API endpoints designed to support mobile-first field data collection from a separate field app.
+- Optional local router/capture endpoints for complete transcript scoring during research runs.
 
-## Field Capture Lanes
-
-- **Lane 1: Instrumented capture feed** — a separate field app or capture client can post real frontier-model turns to `/native-capture`; saved local captures live under `data/native_capture/`.
-- **Lane 2: Controlled frontier router** — the local console lets a researcher select a configured frontier provider/model, capture the model response, and score every turn live.
-
-Both lanes feed the same probabilistic turn-by-turn scorer. The target is user-understanding confidence, not chatbot helpfulness.
-
-Mobile-first field data is expected. This repo defines the scoring and capture API contract; mobile implementation belongs in the separate field-app repo.
-
-See `docs/FIELD_CAPTURE_ARCHITECTURE.md`.
+Field collection and participant-facing workflows belong outside this public benchmark repo. This repo should remain focused on the scoring method, scenarios, traces, and diagnostics.
 
 
 ## Quick Start
@@ -83,20 +83,14 @@ PYTHONPATH=src python -B scripts/serve_frontend.py --port 8090
 
 ## Repository Map
 
-- `RESEARCH_POSITIONING.md` — research thesis and social-cognition framing.
 - `BENCHMARK_METHOD.md` — mathematics and strategy behind the confidence scoring method.
-- `MVP_BRIEF.md` — minimal benchmark scope and evaluation question.
-- `AUDIENCE_GUIDE.md` — audience framing for research teams, simulation teams, and AI-literacy/adoption teams.
-- `PLANNING.md` — original architecture plan for the scoring engine.
-- `ICEBOX.md` — researcher/labeler review decisions to revisit.
-- `src/user_model_confidence/` — scoring engine and score-only server.
+- `docs/ARCHITECTURE_DIAGRAM.md` — visual map of the benchmark pipeline and repo boundary.
+- `evals/scenarios/SCENARIO_INVENTORY.md` — scenario design direction and high-entropy case inventory.
 - `evals/scenarios/fixtures/` — 20 high-entropy scenario fixtures.
-- `outputs/scenario_batch_20/` — generated traces.
-- `reports/scenario_batch_20_diagnostic.md` — batch diagnostic summary.
+- `outputs/scenario_batch_20/` — generated JSON and Markdown traces.
+- `reports/scenario_batch_20_diagnostic.md` — batch diagnostic summary and known scorer mismatch patterns.
+- `src/user_model_confidence/` — scoring engine, evidence ledger, surprise logic, and score server.
 - `frontend/` — local evaluation console for scoring transcripts.
-- `docs/FIELD_CAPTURE_ARCHITECTURE.md` — capture lane contract for instrumentation feed and controlled router.
-- `data/native_capture/` — local, gitignored Lane 1 captures from instrumentation clients.
-- `data/router_runs/` — local, gitignored Lane 2 runs from configured frontier providers.
 
 ## Ground Truth And Calibration
 
