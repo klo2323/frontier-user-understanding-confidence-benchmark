@@ -4,13 +4,13 @@
 
 ## Research Value Statement
 
-This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how confidence changes across hidden user-state dimensions turn by turn.
+This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring whether a system can build enough justified user understanding to drive a meaningful next conversational step under uncertainty.
 
 ## North Star
 
-> At each turn, what does the model infer about the user, how confident is it, and is that confidence justified?
+> At each turn, does the model understand enough about the user to tailor, ask, slow down, build trust, explain how to use AI, or avoid overreach — and is that confidence justified?
 
-The benchmark does not evaluate whether a model gives a polished answer. It evaluates whether the model is forming calibrated beliefs about the human it is interacting with.
+The benchmark does not evaluate whether a model gives a polished answer. It evaluates whether the model is forming calibrated beliefs about the human it is interacting with so it can drive the conversation in a useful direction.
 
 ## Why Confidence Is Calculated Across Dimensions
 
@@ -18,7 +18,7 @@ User understanding is not one variable.
 
 A model can understand the user’s goal while misunderstanding their AI literacy. It can detect low trust while overestimating adversarial intent. It can correctly infer that a user is privacy-sensitive while still having little idea what the user actually wants to accomplish.
 
-The MVP therefore tracks four hidden user-state dimensions separately:
+The reference benchmark therefore tracks four hidden user-state dimensions separately:
 
 | Dimension | What It Asks |
 |---|---|
@@ -36,7 +36,7 @@ Example: if a user asks, “Can you tell if I’m using a VPN?”, the model may
 - moderate confidence that `ai_literacy_level` involves system-boundary confusion;
 - uncertain confidence on `risk_adversarial_intent`.
 
-That uneven confidence pattern is the research object.
+That uneven confidence pattern is the research object because it determines whether the model should tailor, clarify, slow down, or keep building context.
 
 ## Beta Belief Model
 
@@ -181,12 +181,15 @@ The important questions are:
 4. Did the scorer revise beliefs after contradiction?
 5. Did predictive surprise fall as the interaction became clearer?
 6. Did uncertainty remain high when evidence was ambiguous?
+7. What next conversational move is justified: tailor, ask, slow down, build trust, explain AI use, or avoid overreach?
 
-The benchmark is most useful when it exposes overconfidence, not when every score looks high.
+The benchmark is most useful when it exposes overconfidence, premature tailoring, or missed opportunities to build enough understanding for meaningful engagement.
 
-## Why Frontier Labs Care
+## Why AGI And Agent-Simulation Research Care
 
-Frontier labs need evaluations that measure whether models understand humans under uncertainty, not only whether models produce fluent answers.
+If more capable AI systems must interact with humans and other agents in open-ended environments, evaluation needs to measure whether a model can build, update, and act on uncertain beliefs about another agent during interaction.
+
+This is AGI-relevant because the user is treated as another agent with hidden state. The task is not only to answer; it is to decide what interaction strategy is justified when the other agent's goals, trust, literacy, context, and intent are only partially observable.
 
 This method can expose when a model:
 
@@ -195,6 +198,7 @@ This method can expose when a model:
 - mistakes privacy sensitivity for malicious testing;
 - overgeneralizes from culturally narrow synthetic users;
 - fails to revise beliefs after contradiction;
-- treats hidden user state as more stable than it really is.
+- treats hidden user state as more stable than it really is;
+- misses the AI-literacy, cultural, trust, or context signals needed for meaningful adoption.
 
-The research value is the application of interpretable probabilistic belief tracking to frontier-model human understanding across hidden user-state dimensions, turn by turn.
+The research value is the application of interpretable probabilistic belief tracking to frontier-model human understanding across hidden user-state dimensions, turn by turn, in service of better conversation, safer tailoring, more realistic agent simulations, and more meaningful AI adoption.

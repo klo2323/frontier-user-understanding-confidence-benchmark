@@ -3,25 +3,25 @@
 **Author / Project Owner:** Kelsey Ontko  
 **Work Attribution:** This benchmark, scoring engine, scenarios, and research framing are Kelsey Ontko’s work.
 
-This repository is a research prototype for measuring calibrated user understanding in frontier AI systems when prior identity, account, device, or context signals are missing, fragmented, or misleading **turn by turn**.
+This repository is a research prototype for measuring whether frontier AI systems can drive meaningful conversation when user context is hidden, incomplete, culturally indirect, or changing **turn by turn**.
 
-This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how confidence changes across hidden user-state dimensions turn by turn.
+This project applies interpretable probabilistic belief tracking to frontier-model human understanding, measuring how quickly and accurately a system builds a useful local model of the user and whether that model is strong enough to tailor, slow down, ask for context, build trust, or avoid overreach.
 
 It is not a chatbot product. It is not a model. It is not an adoption dashboard.
 
 ## Research Contribution
 
-This repository introduces an interpretable benchmark for evaluating calibrated user understanding in frontier AI systems.
+This repository introduces an interpretable benchmark for evaluating whether frontier AI systems can use hidden user-state signals to drive the next meaningful conversational step.
 
-The benchmark measures whether user-state beliefs are justified by turn-level evidence across four hidden dimensions: `user_goal`, `trust_posture`, `ai_literacy_level`, and `risk_adversarial_intent`.
+The benchmark measures whether the system has enough justified signal to support meaningful interaction across four hidden dimensions: `user_goal`, `trust_posture`, `ai_literacy_level`, and `risk_adversarial_intent`.
 
-Its contribution is not a new model or chatbot interface. It is a transparent scoring protocol that exposes when a system becomes confident, what evidence drove that confidence, and whether that confidence should remain uncertain.
+Its contribution is not a new model or chatbot interface. It is a transparent scoring protocol that exposes when a system is ready to tailor, should stay general, needs to build trust or AI-literacy support, or is becoming overconfident from weak evidence.
 
-This evaluates calibrated human understanding, not answer fluency.
+This evaluates calibrated human understanding for meaningful interaction, not answer fluency.
 
 ## North Star
 
-> Given the conversation so far, what user-state beliefs are justified, how confident is the system, and where is that confidence unsupported or premature?
+> Given the conversation so far, does the model understand enough about the user’s goal, trust posture, AI literacy, and risk context to drive the next meaningful step — and is that confidence justified?
 
 The starting dimensions are:
 
@@ -34,11 +34,11 @@ Every scored user turn exposes inferred values, confidence, variance, evidence, 
 
 ## Why This Matters For Human Understanding Research
 
-Human understanding is not only about producing the next helpful answer. It involves forming beliefs about another person’s goals, uncertainty, trust, literacy, context, and intent while staying aware that those beliefs may be wrong.
+Human understanding is not only about producing the next helpful answer. It involves forming beliefs about another person’s goals, uncertainty, trust, literacy, context, and intent so the system can choose a next move that actually fits the person in front of it.
 
-This benchmark turns that problem into an inspectable evaluation artifact. It asks whether a model can build and revise a user model under uncertainty, especially when identity signals are missing, misleading, or culturally brittle.
+This benchmark turns that problem into an inspectable evaluation artifact. It asks whether a model can build and revise a user model under uncertainty, especially when identity signals are missing, cultural context is indirect, AI literacy is uneven, trust is fragile, or the user may disengage before the system recovers.
 
-That makes it relevant to social cognition, AI literacy, trust calibration, personalization readiness, synthetic-user evaluation, and AGI-adjacent work on dynamic user modeling.
+That makes it relevant to social cognition, AI literacy, trust calibration, personalization readiness, meaningful AI adoption, synthetic-user evaluation, and AGI-relevant work on dynamic user/agent modeling.
 
 ## What This Repo Contains
 
